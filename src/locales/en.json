@@ -1,0 +1,401 @@
+{
+  "nav": {
+    "home": "Home",
+    "programs": "Programs",
+    "about": "About",
+    "success": "Success",
+    "contact": "Contact",
+    "enrollNow": "Enroll Now",
+    "brandName": "Markaz-Almubarak",
+    "brandSubtitle": "ISLAMIC EDUCATION CENTER"
+  },
+  "hero": {
+    "badge": "Excellence Since 2017 • Eastleigh, Nairobi",
+    "title1": "Nurturing",
+    "title2": "Young Hearts",
+    "title3": "with the Light of",
+    "title4": "Qur'an & Sunnah",
+    "description": "Providing a structured, child-friendly Islamic education for the next generation. We focus on authentic knowledge, character building, and academic excellence according to the Qur'an and Sunnah.",
+    "enrollButton": "Enroll Your Child Today",
+    "exploreButton": "Explore Programs",
+    "stats": {
+      "students": "Students",
+      "years": "Years",
+      "certified": "Certified"
+    }
+  },
+  "features": {
+    "islamicStudies": "Islamic Studies",
+    "comprehensiveCurriculum": "Comprehensive Curriculum",
+    "hifdh": {
+      "title": "Hifdh Program",
+      "subtitle": "Qur'an Memorization"
+    },
+    "akhlaq": {
+      "title": "Akhlaq & Manners",
+      "subtitle": "Character Building"
+    },
+    "aqeedah": {
+      "title": "Aqeedah & Fiqh",
+      "subtitle": "Islamic Knowledge"
+    },
+    "arabic": {
+      "title": "Arabic Language",
+      "subtitle": "Language of Qur'an"
+    }
+  },
+  "testimonials": {
+    "parent1": {
+      "text": "My son has transformed completely since joining Markaz-Almubarak. His character, discipline, and love for the Qur'an have grown tremendously.",
+      "parent": "Fatima Ahmed",
+      "location": "Eastleigh Section 3"
+    },
+    "parent2": {
+      "text": "The teachers are knowledgeable, patient, and truly care about each child's progress. I couldn't have asked for a better Islamic education for my daughter.",
+      "parent": "Hassan Ibrahim",
+      "location": "Eastleigh Section 2"
+    },
+    "parent3": {
+      "text": "Seeing my children graduate with Hifdh completion was the proudest moment of my life. JazakAllah khair to the entire team.",
+      "parent": "Amina Mohamed",
+      "location": "Eastleigh Section 1"
+    },
+    "parent4": {
+      "text": "The structured curriculum and caring environment have made all the difference. Our daughter loves going to class every day!",
+      "parent": "Omar Khalid",
+      "location": "Eastleigh Section 4"
+    }
+  },
+  "events": {
+    "annualGraduation": "Annual Graduation Ceremony",
+    "quranCompetition": "Qur'an Competition",
+    "parentWorkshop": "Parent Workshop",
+    "ramadanProgram": "Ramadan Special Program",
+    "types": {
+      "graduation": "Graduation",
+      "competition": "Competition",
+      "workshop": "Workshop",
+      "special": "Special"
+    }
+  },
+  "stats": {
+    "activeStudents": {
+      "value": "250+",
+      "label": "Active Students",
+      "sublabel": "Enrolled this year"
+    },
+    "yearsExcellence": {
+      "value": "7+",
+      "label": "Years Excellence",
+      "sublabel": "Since 2017"
+    },
+    "certifiedStaff": {
+      "value": "100%",
+      "label": "Certified Staff",
+      "sublabel": "Qualified teachers"
+    },
+    "hifdh": {
+      "value": "50+",
+      "label": "Hifdh Graduates",
+      "sublabel": "Proud achievers"
+    },
+    "teachers": {
+      "value": "15+",
+      "label": "Expert Teachers",
+      "sublabel": "Dedicated educators"
+    },
+    "satisfaction": {
+      "value": "98%",
+      "label": "Satisfaction Rate",
+      "sublabel": "Parent feedback"
+    }
+  },
+  "trustMetrics": {
+    "badge": "OUR ACHIEVEMENTS",
+    "heading": "Building Trust Through",
+    "headingHighlight": "Excellence",
+    "description": "Years of dedication to authentic Islamic education have established us as a trusted institution in the community.",
+    "fastTrack": {
+      "title": "Fast Track Learning",
+      "description": "Accelerated programs for dedicated students"
+    },
+    "goalOriented": {
+      "title": "Goal-Oriented",
+      "description": "Clear milestones and achievement tracking"
+    },
+    "caringEnvironment": {
+      "title": "Caring Environment",
+      "description": "Nurturing atmosphere for spiritual growth"
+    }
+  },
+  "programs": {
+    "badge": "OUR PROGRAMS",
+    "heading": "Comprehensive",
+    "headingHighlight": "Islamic Education",
+    "description": "Comprehensive curriculum designed to nurture both spiritual growth and academic excellence in our students.",
+    "learnMore": "Learn More",
+    "filters": {
+      "all": "All Programs",
+      "core": "Core",
+      "advanced": "Advanced",
+      "language": "Language"
+    },
+    "quranMemorization": {
+      "title": "Qur'an Memorization",
+      "subtitle": "Hifdh Program",
+      "description": "Systematic memorization with focus on retention, understanding, and spiritual connection to Allah's words through proven methodologies.",
+      "features": [
+        "Daily Revision Sessions",
+        "Tajweed Mastery",
+        "Spiritual Guidance",
+        "Progress Tracking"
+      ]
+    },
+    "hadithStudies": {
+      "title": "Hadith Studies",
+      "subtitle": "Following the Sunnah",
+      "description": "Exploring the sayings and actions of Prophet Muhammad ﷺ for guidance in daily life with authentic sources.",
+      "features": [
+        "Authentic Sources",
+        "Practical Application",
+        "Character Development",
+        "Daily Practice"
+      ]
+    },
+    "qiraatTajweed": {
+      "title": "Qira'at & Tajweed",
+      "subtitle": "Beautiful Recitation",
+      "description": "Mastering the rules of proper recitation and beautification of Qur'anic verses with expert instruction.",
+      "features": [
+        "Phonetics Mastery",
+        "Voice Modulation",
+        "Melodious Recitation",
+        "One-on-One Training"
+      ]
+    },
+    "aqeedahFiqh": {
+      "title": "Islamic Aqeedah & Fiqh",
+      "subtitle": "Belief & Jurisprudence",
+      "description": "Building a firm foundation in Islamic beliefs and understanding practical religious rulings for daily life.",
+      "features": [
+        "Sound Beliefs",
+        "Daily Rulings",
+        "Scholarly Guidance",
+        "Q&A Sessions"
+      ]
+    },
+    "islamicCharacter": {
+      "title": "Islamic Character",
+      "subtitle": "Akhlaq & Manners",
+      "description": "Developing noble character, discipline, and a servant-hearted personality rooted in Islamic teachings.",
+      "features": [
+        "Prophetic Manners",
+        "Moral Excellence",
+        "Social Ethics",
+        "Leadership Skills"
+      ]
+    },
+    "arabicLanguage": {
+      "title": "Arabic Language",
+      "subtitle": "Language of the Qur'an",
+      "description": "Understanding the language of revelation to deepen spiritual insight and comprehension of Islamic texts.",
+      "features": [
+        "Grammar Foundation",
+        "Vocabulary Building",
+        "Quranic Arabic",
+        "Conversation Practice"
+      ]
+    },
+    "islamicHistory": {
+      "title": "Islamic History",
+      "subtitle": "Stories of the Prophets",
+      "description": "Learning from the lives of Prophets and companions to inspire and guide modern Muslim youth.",
+      "features": [
+        "Prophet Stories",
+        "Companion Lives",
+        "Historical Events",
+        "Life Lessons"
+      ]
+    },
+    "duaAdhkar": {
+      "title": "Du'a & Adhkar",
+      "subtitle": "Daily Remembrance",
+      "description": "Memorizing essential prayers and supplications for daily spiritual connection with Allah.",
+      "features": [
+        "Morning/Evening Adhkar",
+        "Essential Du'as",
+        "Proper Pronunciation",
+        "Meanings & Context"
+      ]
+    },
+    "fiqhWorship": {
+      "title": "Fiqh of Worship",
+      "subtitle": "Practical Islam",
+      "description": "Detailed study of Islamic worship practices including Salah, Sawm, Zakah, and Hajj.",
+      "features": [
+        "Salah in Detail",
+        "Fasting Rules",
+        "Zakah Calculation",
+        "Hajj Overview"
+      ]
+    },
+    "contactTeam": {
+      "heading": "Can't Find What You're Looking For?",
+      "description": "We offer customized programs tailored to your child's needs. Contact us to discuss specialized learning paths.",
+      "buttonText": "Contact Our Team"
+    }
+  },
+  "whyChooseUs": {
+    "badge": "WHY FAMILIES TRUST US",
+    "heading": "Why Choose",
+    "headingHighlight": "Markaz-Almubarak",
+    "description": "A trusted Islamic education center serving the Eastleigh community with excellence and dedication.",
+    "reason1": {
+      "title": "Child-Friendly Environment",
+      "description": "Safe, clean, and welcoming spaces specifically designed for young learners to thrive and feel comfortable in their Islamic journey.",
+      "stats": "100% Safe"
+    },
+    "reason2": {
+      "title": "Structured Curriculum",
+      "description": "Age-appropriate lessons that ensure consistent progress and comprehensive understanding of Islamic knowledge with proven methodologies.",
+      "stats": "9 Programs"
+    },
+    "reason3": {
+      "title": "Small Class Sizes",
+      "description": "Personalized attention for every child, ensuring no student is left behind in their learning journey with 1:15 teacher ratio.",
+      "stats": "Max 15 Students"
+    },
+    "reason4": {
+      "title": "Eastleigh Community Trust",
+      "description": "Seven years of serving Nairobi families with integrity, authenticity, and religious excellence in Islamic education.",
+      "stats": "Since 2017"
+    },
+    "reason5": {
+      "title": "Qualified Teachers",
+      "description": "All our instructors are certified, experienced, and passionate about nurturing the next generation of Muslim learners.",
+      "stats": "15+ Teachers"
+    },
+    "reason6": {
+      "title": "Flexible Schedules",
+      "description": "Morning and afternoon sessions available to accommodate different family schedules and student availability.",
+      "stats": "2 Sessions Daily"
+    },
+    "registration": {
+      "heading": "Register for 2024/2025",
+      "description": "Spaces are limited. Secure your child's place in our upcoming intake and give them the gift of authentic Islamic knowledge.",
+      "parentName": "Parent Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "selectProgram": "Select Program Interest",
+      "programOptions": {
+        "hifdh": "Hifdh Program",
+        "islamicStudies": "Islamic Studies",
+        "arabic": "Arabic Language",
+        "all": "All Programs"
+      },
+      "submitButton": "Request Enrollment Pack",
+      "disclaimer": "By submitting, you agree to receive enrollment information",
+      "verified": "Verified",
+      "certified": "Certified",
+      "trusted": "Trusted"
+    },
+    "videoTour": {
+      "heading": "Take a Virtual Tour",
+      "description": "See our facilities, meet our teachers, and experience what makes Markaz-Almubarak special."
+    }
+  },
+  "successStories": {
+    "badge": "SUCCESS STORIES",
+    "heading": "Our Legacy of",
+    "headingHighlight": "Excellence",
+    "description": "Celebrating milestones and community recognition since our founding in 2017.",
+    "achievement1": {
+      "title": "Annual Graduations",
+      "highlight": "50+ Graduates",
+      "description": "Honoring our Hifdh students in grand ceremonies with local scholars and community leaders."
+    },
+    "achievement2": {
+      "title": "Parent Participation",
+      "highlight": "Monthly Events",
+      "description": "Regular workshops and seminars to bridge the gap between home learning and madrasa education."
+    },
+    "achievement3": {
+      "title": "Regional Recognition",
+      "highlight": "Top Rated",
+      "description": "Ranked as one of Eastleigh's most trusted centers for authentic Islamic knowledge and education."
+    },
+    "upcomingEventsHeading": "Upcoming Events",
+    "testimonialsHeading": "What Parents Say About Us",
+    "statistics": {
+      "parentSatisfaction": "Parent Satisfaction",
+      "studentRetention": "Student Retention",
+      "graduationRate": "Graduation Rate",
+      "communityRating": "Community Rating"
+    }
+  },
+  "cta": {
+    "heading": "Give Your Child the Gift of",
+    "headingHighlight": "Islamic Knowledge",
+    "description": "Join hundreds of families in Eastleigh who have entrusted their children's spiritual growth and Islamic education to Markaz-Almubarak.",
+    "registerButton": "Register Now",
+    "contactButton": "Contact the Center",
+    "benefits": [
+      "Walk-ins welcome",
+      "Flexible payment plans",
+      "Limited spaces available"
+    ],
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "visitUs": "Visit Us"
+  },
+  "footer": {
+    "tagline": "Nurturing the hearts of the Ummah with authentic knowledge according to the Qur'an and Sunnah.",
+    "quickLinks": {
+      "heading": "Quick Links",
+      "aboutUs": "About Us",
+      "ourPrograms": "Our Programs",
+      "admissions": "Admissions",
+      "successStories": "Success Stories",
+      "contact": "Contact",
+      "faq": "FAQ"
+    },
+    "programs": {
+      "heading": "Our Programs",
+      "hifdh": "Hifdh Program",
+      "tajweed": "Tajweed Classes",
+      "islamicStudies": "Islamic Studies",
+      "arabic": "Arabic Language",
+      "character": "Character Building",
+      "fiqhAqeedah": "Fiqh & Aqeedah"
+    },
+    "contactInfo": {
+      "heading": "Contact Info",
+      "addressLabel": "Address",
+      "addressText": "Eastleigh Section 3\nNairobi, Kenya",
+      "phoneLabel": "Phone",
+      "phoneText": "+254 7XX XXX XXX",
+      "emailLabel": "Email",
+      "emailText": "info@markaz-almubarak.com",
+      "hoursLabel": "Hours",
+      "hoursText": "Mon - Fri: 8:00 AM - 4:00 PM\nSat: 9:00 AM - 1:00 PM"
+    },
+    "newsletter": {
+      "heading": "Stay Updated",
+      "description": "Subscribe to our newsletter for updates on events, programs, and Islamic resources.",
+      "placeholder": "Enter your email",
+      "buttonText": "Subscribe"
+    },
+    "copyright": "© 2024 Markaz-Almubarak Islamic Education Center. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "enrollmentTerms": "Enrollment Terms",
+    "credits": "Designed with ❤️ for the Muslim Community"
+  },
+  "language": {
+    "select": "Select Language",
+    "english": "English",
+    "somali": "Somali",
+    "arabic": "Arabic",
+    "kiswahili": "Kiswahili"
+  }
+}

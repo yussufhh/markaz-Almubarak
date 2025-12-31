@@ -1,0 +1,401 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "programs": "Programu",
+    "about": "Kuhusu",
+    "success": "Mafanikio",
+    "contact": "Wasiliana",
+    "enrollNow": "Jiandikishe Sasa",
+    "brandName": "Markaz-Almubarak",
+    "brandSubtitle": "KITUO CHA ELIMU YA KIISLAMU"
+  },
+  "hero": {
+    "badge": "Ubora tangu 2017 • Eastleigh, Nairobi",
+    "title1": "Kulisha",
+    "title2": "Mioyo Midogo",
+    "title3": "kwa Nuru ya",
+    "title4": "Qur'an na Sunnah",
+    "description": "Kutoa elimu ya Kiislamu iliyopangwa, rafiki kwa watoto kwa kizazi kijacho. Tunazingatia maarifa halisi, kujenga tabia, na ubora wa kitaaluma kulingana na Qur'an na Sunnah.",
+    "enrollButton": "Andikisha Mtoto Wako Leo",
+    "exploreButton": "Gundua Programu",
+    "stats": {
+      "students": "Wanafunzi",
+      "years": "Miaka",
+      "certified": "Wasitishwa"
+    }
+  },
+  "features": {
+    "islamicStudies": "Masomo ya Kiislamu",
+    "comprehensiveCurriculum": "Mtaala Kamili",
+    "hifdh": {
+      "title": "Programu ya Hifdh",
+      "subtitle": "Kuhifadhi Qur'an"
+    },
+    "akhlaq": {
+      "title": "Akhlaq na Adabu",
+      "subtitle": "Kujenga Tabia"
+    },
+    "aqeedah": {
+      "title": "Aqeedah na Fiqh",
+      "subtitle": "Maarifa ya Kiislamu"
+    },
+    "arabic": {
+      "title": "Lugha ya Kiarabu",
+      "subtitle": "Lugha ya Qur'an"
+    }
+  },
+  "testimonials": {
+    "parent1": {
+      "text": "Mwanangu amebadilika kabisa tangu kujiunga na Markaz-Almubarak. Tabia yake, nidhamu, na upendo wake wa Qur'an vimekua sana.",
+      "parent": "Fatima Ahmed",
+      "location": "Eastleigh Sehemu ya 3"
+    },
+    "parent2": {
+      "text": "Walimu wana ujuzi, uvumilivu, na kwa kweli wanajali maendeleo ya kila mtoto. Nisingeweza kuomba elimu bora ya Kiislamu zaidi kwa binti yangu.",
+      "parent": "Hassan Ibrahim",
+      "location": "Eastleigh Sehemu ya 2"
+    },
+    "parent3": {
+      "text": "Kuona watoto wangu wakihitimu kwa kukamilisha Hifdh ilikuwa wakati wa fahari zaidi maishani mwangu. JazakAllah khair kwa timu nzima.",
+      "parent": "Amina Mohamed",
+      "location": "Eastleigh Sehemu ya 1"
+    },
+    "parent4": {
+      "text": "Mtaala uliowekwa na mazingira ya huduma yametoa tofauti zote. Binti yetu anapenda kwenda darasani kila siku!",
+      "parent": "Omar Khalid",
+      "location": "Eastleigh Sehemu ya 4"
+    }
+  },
+  "events": {
+    "annualGraduation": "Sherehe ya Kuhitimu ya Kila Mwaka",
+    "quranCompetition": "Mashindano ya Qur'an",
+    "parentWorkshop": "Warsha ya Wazazi",
+    "ramadanProgram": "Programu Maalum ya Ramadhan",
+    "types": {
+      "graduation": "Kuhitimu",
+      "competition": "Mashindano",
+      "workshop": "Warsha",
+      "special": "Maalum"
+    }
+  },
+  "stats": {
+    "activeStudents": {
+      "value": "250+",
+      "label": "Wanafunzi Hai",
+      "sublabel": "Waliojiandikisha mwaka huu"
+    },
+    "yearsExcellence": {
+      "value": "7+",
+      "label": "Miaka ya Ubora",
+      "sublabel": "Tangu 2017"
+    },
+    "certifiedStaff": {
+      "value": "100%",
+      "label": "Wafanyakazi Wasitishwa",
+      "sublabel": "Walimu wenye sifa"
+    },
+    "hifdh": {
+      "value": "50+",
+      "label": "Waliomaliza Hifdh",
+      "sublabel": "Wafaulu wenye fahari"
+    },
+    "teachers": {
+      "value": "15+",
+      "label": "Walimu Wataalam",
+      "sublabel": "Waelimishaji waliojitoa"
+    },
+    "satisfaction": {
+      "value": "98%",
+      "label": "Kiwango cha Kuridhika",
+      "sublabel": "Maoni ya wazazi"
+    }
+  },
+  "trustMetrics": {
+    "badge": "MAFANIKIO YETU",
+    "heading": "Kujenga Uaminifu Kupitia",
+    "headingHighlight": "Ubora",
+    "description": "Miaka ya kujitolea kwa elimu ya Kiislamu halisi imetufanya taasisi inayoaminika katika jamii.",
+    "fastTrack": {
+      "title": "Kujifunza Haraka",
+      "description": "Programu za kasi kwa wanafunzi waliojitoa"
+    },
+    "goalOriented": {
+      "title": "Lengo Maalum",
+      "description": "Hatua wazi na ufuatiliaji wa mafanikio"
+    },
+    "caringEnvironment": {
+      "title": "Mazingira ya Huduma",
+      "description": "Hali inayolisha ukuaji wa kiroho"
+    }
+  },
+  "programs": {
+    "badge": "PROGRAMU ZETU",
+    "heading": "Elimu ya Kiislamu",
+    "headingHighlight": "Kamili",
+    "description": "Mtaala kamili uliobuniwa kulisha ukuaji wa kiroho na ubora wa kitaaluma kwa wanafunzi wetu.",
+    "learnMore": "Jifunze Zaidi",
+    "filters": {
+      "all": "Programu Zote",
+      "core": "Msingi",
+      "advanced": "Juu",
+      "language": "Lugha"
+    },
+    "quranMemorization": {
+      "title": "Kuhifadhi Qur'an",
+      "subtitle": "Programu ya Hifdh",
+      "description": "Kuhifadhi kwa utaratibu kwa kuzingatia kumbukumbu, uelewa, na uhusiano wa kiroho na maneno ya Allah kupitia mbinu zilizothibitishwa.",
+      "features": [
+        "Vipindi vya Marudio ya Kila Siku",
+        "Ustadi wa Tajweed",
+        "Uongozi wa Kiroho",
+        "Ufuatiliaji wa Maendeleo"
+      ]
+    },
+    "hadithStudies": {
+      "title": "Masomo ya Hadith",
+      "subtitle": "Kufuata Sunnah",
+      "description": "Kuchunguza maneno na matendo ya Mtume Muhammad ﷺ kwa mwongozo katika maisha ya kila siku na vyanzo halisi.",
+      "features": [
+        "Vyanzo Halisi",
+        "Matumizi ya Vitendo",
+        "Maendeleo ya Tabia",
+        "Mazoezi ya Kila Siku"
+      ]
+    },
+    "qiraatTajweed": {
+      "title": "Qira'at & Tajweed",
+      "subtitle": "Kusoma kwa Uzuri",
+      "description": "Kujifunza sheria za kusoma vizuri na kuremba aya za Qur'an na mafundisho ya kitaalamu.",
+      "features": [
+        "Ustadi wa Sauti",
+        "Kubadilisha Sauti",
+        "Kusoma kwa Utamu",
+        "Mafunzo Binafsi"
+      ]
+    },
+    "aqeedahFiqh": {
+      "title": "Aqeedah & Fiqh ya Kiislamu",
+      "subtitle": "Imani & Sheria",
+      "description": "Kujenga msingi imara katika imani za Kiislamu na kuelewa sheria za kidini za vitendo kwa maisha ya kila siku.",
+      "features": [
+        "Imani Sahihi",
+        "Sheria za Kila Siku",
+        "Uongozi wa Wanazuoni",
+        "Vipindi vya Maswali na Majibu"
+      ]
+    },
+    "islamicCharacter": {
+      "title": "Tabia ya Kiislamu",
+      "subtitle": "Akhlaq & Adabu",
+      "description": "Kukuza tabia nzuri, nidhamu, na utu wa kutumikia uliojengwa kwenye mafundisho ya Kiislamu.",
+      "features": [
+        "Adabu za Kinabii",
+        "Ubora wa Maadili",
+        "Maadili ya Kijamii",
+        "Ujuzi wa Uongozi"
+      ]
+    },
+    "arabicLanguage": {
+      "title": "Lugha ya Kiarabu",
+      "subtitle": "Lugha ya Qur'an",
+      "description": "Kuelewa lugha ya ufunuo ili kuongeza ufahamu wa kiroho na uelewa wa maandiko ya Kiislamu.",
+      "features": [
+        "Msingi wa Sarufi",
+        "Kujenga Msamiati",
+        "Kiarabu cha Qur'an",
+        "Mazoezi ya Mazungumzo"
+      ]
+    },
+    "islamicHistory": {
+      "title": "Historia ya Kiislamu",
+      "subtitle": "Hadithi za Manabii",
+      "description": "Kujifunza kutoka kwa maisha ya Manabii na masahaba ili kuhamasisha na kuongoza vijana wa Kiislamu wa kisasa.",
+      "features": [
+        "Hadithi za Manabii",
+        "Maisha ya Masahaba",
+        "Matukio ya Kihistoria",
+        "Masomo ya Maisha"
+      ]
+    },
+    "duaAdhkar": {
+      "title": "Du'a & Adhkar",
+      "subtitle": "Ukumbusho wa Kila Siku",
+      "description": "Kuhifadhi maombi na dua muhimu kwa muunganisho wa kiroho wa kila siku na Allah.",
+      "features": [
+        "Adhkar za Asubuhi/Jioni",
+        "Dua Muhimu",
+        "Matamshi Sahihi",
+        "Maana & Muktadha"
+      ]
+    },
+    "fiqhWorship": {
+      "title": "Fiqh ya Ibada",
+      "subtitle": "Uislamu wa Vitendo",
+      "description": "Masomo ya kina ya desturi za ibada za Kiislamu ikiwa ni pamoja na Salah, Sawm, Zakah, na Hajj.",
+      "features": [
+        "Salah kwa Undani",
+        "Sheria za Kufunga",
+        "Kukokotoa Zakah",
+        "Muhtasari wa Hajj"
+      ]
+    },
+    "contactTeam": {
+      "heading": "Hupati Unachotafuta?",
+      "description": "Tunatoa programu maalum zilizoratibiwa kwa mahitaji ya mtoto wako. Wasiliana nasi kujadili njia maalum za kujifunza.",
+      "buttonText": "Wasiliana na Timu Yetu"
+    }
+  },
+  "whyChooseUs": {
+    "badge": "KWA NINI FAMILIA ZINATUAMINI",
+    "heading": "Kwa Nini Uchague",
+    "headingHighlight": "Markaz-Almubarak",
+    "description": "Kituo cha elimu ya Kiislamu kinachoaminika kinachotumikia jamii ya Eastleigh kwa ubora na kujitolea.",
+    "reason1": {
+      "title": "Mazingira Rafiki kwa Watoto",
+      "description": "Nafasi salama, safi, na za kukaribisha zilizoundwa hasa kwa wanafunzi wadogo kustawi na kujisikia vizuri katika safari yao ya Kiislamu.",
+      "stats": "100% Salama"
+    },
+    "reason2": {
+      "title": "Mtaala Uliopangwa",
+      "description": "Masomo yanayofaa kwa umri yanayohakikisha maendeleo thabiti na uelewa kamili wa maarifa ya Kiislamu kwa mbinu zilizothibitishwa.",
+      "stats": "Programu 9"
+    },
+    "reason3": {
+      "title": "Madarasa Madogo",
+      "description": "Umakini binafsi kwa kila mtoto, kuhakikisha hakuna mwanafunzi anayeachwa nyuma katika safari yao ya kujifunza na uwiano wa 1:15 mwalimu kwa mwanafunzi.",
+      "stats": "Juu Wanafunzi 15"
+    },
+    "reason4": {
+      "title": "Uaminifu wa Jamii ya Eastleigh",
+      "description": "Miaka saba ya kutumikia familia za Nairobi kwa uadilifu, uhalisi, na ubora wa kidini katika elimu ya Kiislamu.",
+      "stats": "Tangu 2017"
+    },
+    "reason5": {
+      "title": "Walimu Wenye Sifa",
+      "description": "Walimu wetu wote wana sifa, uzoefu, na shauku ya kulisha kizazi kijacho cha wanafunzi wa Kiislamu.",
+      "stats": "Walimu 15+"
+    },
+    "reason6": {
+      "title": "Ratiba Rahisi",
+      "description": "Vipindi vya asubuhi na alasiri vipo ili kukidhi ratiba tofauti za familia na upatikanaji wa wanafunzi.",
+      "stats": "Vipindi 2 Kila Siku"
+    },
+    "registration": {
+      "heading": "Jiandikishe kwa 2024/2025",
+      "description": "Nafasi ni chache. Hifadhi nafasi ya mtoto wako katika kuingia kujao na umpe zawadi ya maarifa halisi ya Kiislamu.",
+      "parentName": "Jina la Mzazi",
+      "email": "Anwani ya Barua Pepe",
+      "phone": "Nambari ya Simu",
+      "selectProgram": "Chagua Nia ya Programu",
+      "programOptions": {
+        "hifdh": "Programu ya Hifdh",
+        "islamicStudies": "Masomo ya Kiislamu",
+        "arabic": "Lugha ya Kiarabu",
+        "all": "Programu Zote"
+      },
+      "submitButton": "Omba Pakiti ya Usajili",
+      "disclaimer": "Kwa kuwasilisha, unakubali kupokea taarifa za usajili",
+      "verified": "Imethibitishwa",
+      "certified": "Imerasimishwa",
+      "trusted": "Inayoaminika"
+    },
+    "videoTour": {
+      "heading": "Chukua Ziara ya Mtandao",
+      "description": "Ona vituo vyetu, kutana na walimu wetu, na upate uzoefu wa kinachofanya Markaz-Almubarak kuwa maalum."
+    }
+  },
+  "successStories": {
+    "badge": "HADITHI ZA MAFANIKIO",
+    "heading": "Urithi Wetu wa",
+    "headingHighlight": "Ubora",
+    "description": "Kusherehekea hatua muhimu na utambuzi wa jamii tangu kuanzishwa kwetu mnamo 2017.",
+    "achievement1": {
+      "title": "Sherehe za Kuhitimu za Kila Mwaka",
+      "highlight": "Wahitimu 50+",
+      "description": "Kuheshimu wanafunzi wetu wa Hifdh katika sherehe kubwa na wanazuoni wa ndani na viongozi wa jamii."
+    },
+    "achievement2": {
+      "title": "Ushiriki wa Wazazi",
+      "highlight": "Matukio ya Kila Mwezi",
+      "description": "Warsha na semina za mara kwa mara kuunganisha pengo kati ya kujifunza nyumbani na elimu ya madrasa."
+    },
+    "achievement3": {
+      "title": "Utambuzi wa Kikanda",
+      "highlight": "Imepewa Alama ya Juu",
+      "description": "Imeorodheshwa kama moja ya vituo vya kuaminika zaidi vya Eastleigh kwa maarifa halisi ya Kiislamu na elimu."
+    },
+    "upcomingEventsHeading": "Matukio Yajayo",
+    "testimonialsHeading": "Wazazi Wanasema Nini Kuhusu Sisi",
+    "statistics": {
+      "parentSatisfaction": "Kuridhika kwa Wazazi",
+      "studentRetention": "Kuhifadhi Wanafunzi",
+      "graduationRate": "Kiwango cha Kuhitimu",
+      "communityRating": "Ukadiriaji wa Jamii"
+    }
+  },
+  "cta": {
+    "heading": "Mpe Mtoto Wako Zawadi ya",
+    "headingHighlight": "Maarifa ya Kiislamu",
+    "description": "Jiunge na mamia ya familia katika Eastleigh ambazo zimeamini ukuaji wa kiroho wa watoto wao na elimu ya Kiislamu kwa Markaz-Almubarak.",
+    "registerButton": "Jiandikishe Sasa",
+    "contactButton": "Wasiliana na Kituo",
+    "benefits": [
+      "Ziara bila miadi zinakaribisha",
+      "Mipango rahisi ya malipo",
+      "Nafasi chache zinapatikana"
+    ],
+    "callUs": "Tupigie Simu",
+    "emailUs": "Tutumie Barua Pepe",
+    "visitUs": "Tutembelee"
+  },
+  "footer": {
+    "tagline": "Kulisha mioyo ya Ummah kwa maarifa halisi kulingana na Qur'an na Sunnah.",
+    "quickLinks": {
+      "heading": "Viungo vya Haraka",
+      "aboutUs": "Kuhusu Sisi",
+      "ourPrograms": "Programu Zetu",
+      "admissions": "Kuingizwa",
+      "successStories": "Hadithi za Mafanikio",
+      "contact": "Wasiliana",
+      "faq": "Maswali Yanayoulizwa Mara kwa Mara"
+    },
+    "programs": {
+      "heading": "Programu Zetu",
+      "hifdh": "Programu ya Hifdh",
+      "tajweed": "Madarasa ya Tajweed",
+      "islamicStudies": "Masomo ya Kiislamu",
+      "arabic": "Lugha ya Kiarabu",
+      "character": "Kujenga Tabia",
+      "fiqhAqeedah": "Fiqh & Aqeedah"
+    },
+    "contactInfo": {
+      "heading": "Taarifa za Mawasiliano",
+      "addressLabel": "Anwani",
+      "addressText": "Eastleigh Sehemu ya 3\\nNairobi, Kenya",
+      "phoneLabel": "Simu",
+      "phoneText": "+254 7XX XXX XXX",
+      "emailLabel": "Barua Pepe",
+      "emailText": "info@markaz-almubarak.com",
+      "hoursLabel": "Masaa",
+      "hoursText": "Jumatatu - Ijumaa: 8:00 Asubuhi - 4:00 Jioni\\nJumamosi: 9:00 Asubuhi - 1:00 Mchana"
+    },
+    "newsletter": {
+      "heading": "Baki Umesasishwa",
+      "description": "Jiandikishe kwa jarida letu ili kupata masasisho kuhusu matukio, programu, na rasilimali za Kiislamu.",
+      "placeholder": "Weka barua pepe yako",
+      "buttonText": "Jiandikishe"
+    },
+    "copyright": "© 2024 Kituo cha Elimu ya Kiislamu cha Markaz-Almubarak. Haki zote zimehifadhiwa.",
+    "privacyPolicy": "Sera ya Faragha",
+    "termsOfService": "Masharti ya Huduma",
+    "enrollmentTerms": "Masharti ya Usajili",
+    "credits": "Imeundwa kwa ❤️ kwa Jamii ya Kiislamu"
+  },
+  "language": {
+    "select": "Chagua Lugha",
+    "english": "Kiingereza",
+    "somali": "Kisomali",
+    "arabic": "Kiarabu",
+    "kiswahili": "Kiswahili"
+  }
+}

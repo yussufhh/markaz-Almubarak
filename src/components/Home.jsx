@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/logo.png';
+import LanguageSelector from './LanguageSelector';
 import { 
   Menu, X, ArrowRight, Star, BookOpen, ShieldCheck, Users, Calendar, 
   Award, GraduationCap, CheckCircle, Heart, ChevronRight, MapPin, Phone,
@@ -11,6 +13,7 @@ import {
 } from 'lucide-react';
 
 const Home = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -53,49 +56,49 @@ const Home = () => {
 
   const parentTestimonials = [
     {
-      text: "My son has transformed completely since joining Markaz-Almubarak. His character, discipline, and love for the Qur'an have grown tremendously.",
-      parent: "Fatima Ahmed",
-      location: "Eastleigh Section 3",
+      text: t('testimonials.parent1.text'),
+      parent: t('testimonials.parent1.parent'),
+      location: t('testimonials.parent1.location'),
       rating: 5,
       image: "FA"
     },
     {
-      text: "The teachers are knowledgeable, patient, and truly care about each child's progress. I couldn't have asked for a better Islamic education for my daughter.",
-      parent: "Hassan Ibrahim",
-      location: "Eastleigh Section 2",
+      text: t('testimonials.parent2.text'),
+      parent: t('testimonials.parent2.parent'),
+      location: t('testimonials.parent2.location'),
       rating: 5,
       image: "HI"
     },
     {
-      text: "Seeing my children graduate with Hifdh completion was the proudest moment of my life. JazakAllah khair to the entire team.",
-      parent: "Amina Mohamed",
-      location: "Eastleigh Section 1",
+      text: t('testimonials.parent3.text'),
+      parent: t('testimonials.parent3.parent'),
+      location: t('testimonials.parent3.location'),
       rating: 5,
       image: "AM"
     },
     {
-      text: "The structured curriculum and caring environment have made all the difference. Our daughter loves going to class every day!",
-      parent: "Omar Khalid",
-      location: "Eastleigh Section 4",
+      text: t('testimonials.parent4.text'),
+      parent: t('testimonials.parent4.parent'),
+      location: t('testimonials.parent4.location'),
       rating: 5,
       image: "OK"
     }
   ];
 
   const events = [
-    { title: "Annual Graduation Ceremony", date: "March 15, 2024", type: "Graduation" },
-    { title: "Qur'an Competition", date: "April 20, 2024", type: "Competition" },
-    { title: "Parent Workshop", date: "May 10, 2024", type: "Workshop" },
-    { title: "Ramadan Special Program", date: "June 5, 2024", type: "Special" }
+    { title: t('events.annualGraduation'), date: "March 15, 2024", type: t('events.types.graduation') },
+    { title: t('events.quranCompetition'), date: "April 20, 2024", type: t('events.types.competition') },
+    { title: t('events.parentWorkshop'), date: "May 10, 2024", type: t('events.types.workshop') },
+    { title: t('events.ramadanProgram'), date: "June 5, 2024", type: t('events.types.special') }
   ];
 
   const stats = [
-    { value: "250+", label: "Active Students", sublabel: "Enrolled this year", icon: Users },
-    { value: "7+", label: "Years Excellence", sublabel: "Since 2017", icon: Calendar },
-    { value: "100%", label: "Certified Staff", sublabel: "Qualified teachers", icon: Award },
-    { value: "50+", label: "Hifdh Graduates", sublabel: "Proud achievers", icon: GraduationCap },
-    { value: "15+", label: "Expert Teachers", sublabel: "Dedicated educators", icon: BookOpen },
-    { value: "98%", label: "Satisfaction Rate", sublabel: "Parent feedback", icon: Star }
+    { value: t('stats.activeStudents.value'), label: t('stats.activeStudents.label'), sublabel: t('stats.activeStudents.sublabel'), icon: Users },
+    { value: t('stats.yearsExcellence.value'), label: t('stats.yearsExcellence.label'), sublabel: t('stats.yearsExcellence.sublabel'), icon: Calendar },
+    { value: t('stats.certifiedStaff.value'), label: t('stats.certifiedStaff.label'), sublabel: t('stats.certifiedStaff.sublabel'), icon: Award },
+    { value: t('stats.hifdh.value'), label: t('stats.hifdh.label'), sublabel: t('stats.hifdh.sublabel'), icon: GraduationCap },
+    { value: t('stats.teachers.value'), label: t('stats.teachers.label'), sublabel: t('stats.teachers.sublabel'), icon: BookOpen },
+    { value: t('stats.satisfaction.value'), label: t('stats.satisfaction.label'), sublabel: t('stats.satisfaction.sublabel'), icon: Star }
   ];
 
   useEffect(() => {
@@ -130,23 +133,23 @@ const Home = () => {
               <span className={`font-black text-2xl leading-none tracking-tight ${
                 scrolled ? 'text-blue-900' : 'text-white'
               }`}>
-                Markaz-Almubarak
+                {t('nav.brandName')}
               </span>
               <span className={`text-xs tracking-widest font-bold ${
                 scrolled ? 'text-blue-600' : 'text-blue-200'
               }`}>
-                ISLAMIC EDUCATION CENTER
+                {t('nav.brandSubtitle')}
               </span>
             </div>
           </motion.div>
 
           <div className="hidden lg:flex items-center gap-6">
             {[
-              { name: 'Home', href: '#hero' },
-              { name: 'Programs', href: '#programs' },
-              { name: 'About', href: '#about-us' },
-              { name: 'Success', href: '#success-stories' },
-              { name: 'Contact', href: '#contact' }
+              { name: t('nav.home'), href: '#hero' },
+              { name: t('nav.programs'), href: '#programs' },
+              { name: t('nav.about'), href: '#about-us' },
+              { name: t('nav.success'), href: '#success-stories' },
+              { name: t('nav.contact'), href: '#contact' }
             ].map((item, idx) => (
               <motion.a 
                 key={item.name}
@@ -166,6 +169,7 @@ const Home = () => {
                 }`}></span>
               </motion.a>
             ))}
+            <LanguageSelector />
             <motion.button 
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -175,7 +179,7 @@ const Home = () => {
                   : 'bg-white text-blue-900 shadow-xl shadow-blue-900/20'
               } px-8 py-3.5 rounded-xl font-bold text-sm hover:shadow-2xl transition-all duration-300`}
             >
-              Enroll Now
+              {t('nav.enrollNow')}
             </motion.button>
           </div>
 
@@ -201,19 +205,28 @@ const Home = () => {
               className="lg:hidden bg-white border-t border-blue-100 shadow-2xl"
             >
               <div className="px-6 py-6 space-y-3">
-                {['Home', 'Programs', 'About', 'Success', 'Contact'].map((item) => (
+                {[
+                  { name: t('nav.home'), href: 'hero' },
+                  { name: t('nav.programs'), href: 'programs' },
+                  { name: t('nav.about'), href: 'about-us' },
+                  { name: t('nav.success'), href: 'success-stories' },
+                  { name: t('nav.contact'), href: 'contact' }
+                ].map((item) => (
                   <motion.a 
-                    key={item}
+                    key={item.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item.href}`}
                     className="block text-gray-700 font-bold hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-blue-50"
                   >
-                    {item}
+                    {item.name}
                   </motion.a>
                 ))}
+                <div className="pt-2 pb-2">
+                  <LanguageSelector />
+                </div>
                 <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all mt-4">
-                  Enroll Now
+                  {t('nav.enrollNow')}
                 </button>
               </div>
             </motion.div>
@@ -274,7 +287,7 @@ const Home = () => {
             >
               <Star size={16} className="text-blue-300" fill="currentColor" />
               <span className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                Excellence Since 2017 • Eastleigh, Nairobi
+                {t('hero.badge')}
               </span>
             </motion.div>
             
@@ -284,11 +297,11 @@ const Home = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8"
             >
-              Nurturing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-200">
-                Young Hearts
-              </span> with the Light of{' '}
+              {t('hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-200">
+                {t('hero.title2')}
+              </span> {t('hero.title3')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-blue-300">
-                Qur'an & Sunnah
+                {t('hero.title4')}
               </span>
             </motion.h1>
             
@@ -298,8 +311,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               className="text-xl text-blue-100 mb-10 leading-relaxed max-w-xl"
             >
-              Providing a structured, child-friendly Islamic education for the next generation. 
-              We focus on authentic knowledge, character building, and academic excellence according to the Qur'an and Sunnah.
+              {t('hero.description')}
             </motion.p>
             
             <motion.div 
@@ -313,7 +325,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-900 px-10 py-5 rounded-xl font-black text-lg hover:shadow-2xl hover:shadow-white/30 transition-all flex items-center gap-3 group"
               >
-                <span>Enroll Your Child Today</span>
+                <span>{t('hero.enrollButton')}</span>
                 <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform" strokeWidth={3} />
               </motion.button>
               <motion.button 
@@ -321,7 +333,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-blue-500/20 border-2 border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-500/30 transition-all backdrop-blur-md"
               >
-                Explore Programs
+                {t('hero.exploreButton')}
               </motion.button>
             </motion.div>
             
@@ -333,9 +345,9 @@ const Home = () => {
               className="mt-14 flex flex-wrap items-center gap-8"
             >
               {[
-                { value: "250+", label: "Students", icon: Users },
-                { value: "7+", label: "Years", icon: Calendar },
-                { value: "100%", label: "Certified", icon: Award }
+                { value: t('stats.activeStudents.value'), label: t('hero.stats.students'), icon: Users },
+                { value: t('stats.yearsExcellence.value'), label: t('hero.stats.years'), icon: Calendar },
+                { value: t('stats.certifiedStaff.value'), label: t('hero.stats.certified'), icon: Award }
               ].map((stat, idx) => (
                 <motion.div 
                   key={idx}
@@ -374,8 +386,8 @@ const Home = () => {
                       <BookOpen className="text-white" size={28} strokeWidth={2.5} />
                     </div>
                     <div>
-                      <div className="text-sm font-bold text-white">Islamic Studies</div>
-                      <div className="text-xs text-blue-200">Comprehensive Curriculum</div>
+                      <div className="text-sm font-bold text-white">{t('features.islamicStudies')}</div>
+                      <div className="text-xs text-blue-200">{t('features.comprehensiveCurriculum')}</div>
                     </div>
                   </div>
                   <Sparkles className="text-blue-300" size={24} />
@@ -383,10 +395,10 @@ const Home = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: BookOpen, title: "Hifdh Program", subtitle: "Qur'an Memorization" },
-                    { icon: Heart, title: "Akhlaq & Manners", subtitle: "Character Building" },
-                    { icon: ShieldCheck, title: "Aqeedah & Fiqh", subtitle: "Islamic Knowledge" },
-                    { icon: Globe, title: "Arabic Language", subtitle: "Language of Qur'an" }
+                    { icon: BookOpen, title: t('features.hifdh.title'), subtitle: t('features.hifdh.subtitle') },
+                    { icon: Heart, title: t('features.akhlaq.title'), subtitle: t('features.akhlaq.subtitle') },
+                    { icon: ShieldCheck, title: t('features.aqeedah.title'), subtitle: t('features.aqeedah.subtitle') },
+                    { icon: Globe, title: t('features.arabic.title'), subtitle: t('features.arabic.subtitle') }
                   ].map((item, idx) => (
                     <motion.div 
                       key={idx}
@@ -472,16 +484,16 @@ const Home = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-900 rounded-full text-sm font-bold mb-6 shadow-lg"
             >
               <Trophy className="text-blue-600" size={18} />
-              OUR ACHIEVEMENTS
+              {t('trustMetrics.badge')}
             </motion.div>
             <h2 className="text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
-              Building Trust Through{' '}
+              {t('trustMetrics.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                Excellence
+                {t('trustMetrics.headingHighlight')}
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Years of dedication to authentic Islamic education have established us as a trusted institution in the community.
+              {t('trustMetrics.description')}
             </p>
           </motion.div>
 
@@ -531,9 +543,9 @@ const Home = () => {
           {/* Feature Highlights */}
           <motion.div {...fadeInUp} className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Zap, title: "Fast Track Learning", desc: "Accelerated programs for dedicated students" },
-              { icon: Target, title: "Goal-Oriented", desc: "Clear milestones and achievement tracking" },
-              { icon: Heart, title: "Caring Environment", desc: "Nurturing atmosphere for spiritual growth" }
+              { icon: Zap, title: t('trustMetrics.fastTrack.title'), desc: t('trustMetrics.fastTrack.description') },
+              { icon: Target, title: t('trustMetrics.goalOriented.title'), desc: t('trustMetrics.goalOriented.description') },
+              { icon: Heart, title: t('trustMetrics.caringEnvironment.title'), desc: t('trustMetrics.caringEnvironment.description') }
             ].map((feature, idx) => (
               <motion.div 
                 key={idx}
@@ -568,16 +580,16 @@ const Home = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full text-sm font-bold mb-6 shadow-xl"
             >
               <BookOpen className="text-white" size={18} />
-              OUR PROGRAMS
+              {t('programs.badge')}
             </motion.div>
             <h2 className="text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
-              Comprehensive{' '}
+              {t('programs.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                Islamic Education
+                {t('programs.headingHighlight')}
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive curriculum designed to nurture both spiritual growth and academic excellence in our students.
+              {t('programs.description')}
             </p>
           </motion.div>
 
@@ -586,19 +598,24 @@ const Home = () => {
             {...fadeIn}
             className="flex justify-center gap-3 mb-12 flex-wrap"
           >
-            {['All Programs', 'Core', 'Advanced', 'Language'].map((filter, idx) => (
+            {[
+              { key: 'all-programs', label: t('programs.filters.all') },
+              { key: 'core', label: t('programs.filters.core') },
+              { key: 'advanced', label: t('programs.filters.advanced') },
+              { key: 'language', label: t('programs.filters.language') }
+            ].map((filter, idx) => (
               <motion.button
-                key={filter}
+                key={filter.key}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveTab(filter.toLowerCase().replace(' ', '-'))}
+                onClick={() => setActiveTab(filter.key)}
                 className={`px-6 py-3 rounded-xl font-bold text-sm transition-all ${
-                  activeTab === filter.toLowerCase().replace(' ', '-')
+                  activeTab === filter.key
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 border border-blue-200 hover:border-blue-400'
                 }`}
               >
-                {filter}
+                {filter.label}
               </motion.button>
             ))}
           </motion.div>
@@ -606,85 +623,85 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
-                title: "Qur'an Memorization",
-                subtitle: "Hifdh Program",
+                title: t('programs.quranMemorization.title'),
+                subtitle: t('programs.quranMemorization.subtitle'),
                 category: "core",
-                description: "Systematic memorization with focus on retention, understanding, and spiritual connection to Allah's words through proven methodologies.",
+                description: t('programs.quranMemorization.description'),
                 icon: BookOpen,
                 gradient: "from-blue-600 to-blue-700",
-                features: ["Daily Revision Sessions", "Tajweed Mastery", "Spiritual Guidance", "Progress Tracking"]
+                features: t('programs.quranMemorization.features', { returnObjects: true })
               },
               {
-                title: "Hadith Studies",
-                subtitle: "Following the Sunnah",
+                title: t('programs.hadithStudies.title'),
+                subtitle: t('programs.hadithStudies.subtitle'),
                 category: "core",
-                description: "Exploring the sayings and actions of Prophet Muhammad ﷺ for guidance in daily life with authentic sources.",
+                description: t('programs.hadithStudies.description'),
                 icon: Star,
                 gradient: "from-cyan-600 to-cyan-700",
-                features: ["Authentic Sources", "Practical Application", "Character Development", "Daily Practice"]
+                features: t('programs.hadithStudies.features', { returnObjects: true })
               },
               {
-                title: "Qira'at & Tajweed",
-                subtitle: "Beautiful Recitation",
+                title: t('programs.qiraatTajweed.title'),
+                subtitle: t('programs.qiraatTajweed.subtitle'),
                 category: "advanced",
-                description: "Mastering the rules of proper recitation and beautification of Qur'anic verses with expert instruction.",
+                description: t('programs.qiraatTajweed.description'),
                 icon: Heart,
                 gradient: "from-indigo-600 to-indigo-700",
-                features: ["Phonetics Mastery", "Voice Modulation", "Melodious Recitation", "One-on-One Training"]
+                features: t('programs.qiraatTajweed.features', { returnObjects: true })
               },
               {
-                title: "Islamic Aqeedah & Fiqh",
-                subtitle: "Belief & Jurisprudence",
+                title: t('programs.aqeedahFiqh.title'),
+                subtitle: t('programs.aqeedahFiqh.subtitle'),
                 category: "core",
-                description: "Building a firm foundation in Islamic beliefs and understanding practical religious rulings for daily life.",
+                description: t('programs.aqeedahFiqh.description'),
                 icon: ShieldCheck,
                 gradient: "from-blue-700 to-indigo-700",
-                features: ["Sound Beliefs", "Daily Rulings", "Scholarly Guidance", "Q&A Sessions"]
+                features: t('programs.aqeedahFiqh.features', { returnObjects: true })
               },
               {
-                title: "Islamic Character",
-                subtitle: "Akhlaq & Manners",
+                title: t('programs.islamicCharacter.title'),
+                subtitle: t('programs.islamicCharacter.subtitle'),
                 category: "core",
-                description: "Developing noble character, discipline, and a servant-hearted personality rooted in Islamic teachings.",
+                description: t('programs.islamicCharacter.description'),
                 icon: CheckCircle,
                 gradient: "from-teal-600 to-cyan-600",
-                features: ["Prophetic Manners", "Moral Excellence", "Social Ethics", "Leadership Skills"]
+                features: t('programs.islamicCharacter.features', { returnObjects: true })
               },
               {
-                title: "Arabic Language",
-                subtitle: "Language of the Qur'an",
+                title: t('programs.arabicLanguage.title'),
+                subtitle: t('programs.arabicLanguage.subtitle'),
                 category: "language",
-                description: "Understanding the language of revelation to deepen spiritual insight and comprehension of Islamic texts.",
+                description: t('programs.arabicLanguage.description'),
                 icon: Globe,
                 gradient: "from-sky-600 to-blue-600",
-                features: ["Grammar Foundation", "Vocabulary Building", "Quranic Arabic", "Conversation Practice"]
+                features: t('programs.arabicLanguage.features', { returnObjects: true })
               },
               {
-                title: "Islamic History",
-                subtitle: "Stories of the Prophets",
+                title: t('programs.islamicHistory.title'),
+                subtitle: t('programs.islamicHistory.subtitle'),
                 category: "advanced",
-                description: "Learning from the lives of Prophets and companions to inspire and guide modern Muslim youth.",
+                description: t('programs.islamicHistory.description'),
                 icon: BookMarked,
                 gradient: "from-violet-600 to-purple-600",
-                features: ["Prophet Stories", "Companion Lives", "Historical Events", "Life Lessons"]
+                features: t('programs.islamicHistory.features', { returnObjects: true })
               },
               {
-                title: "Du'a & Adhkar",
-                subtitle: "Daily Remembrance",
+                title: t('programs.duaAdhkar.title'),
+                subtitle: t('programs.duaAdhkar.subtitle'),
                 category: "core",
-                description: "Memorizing essential prayers and supplications for daily spiritual connection with Allah.",
+                description: t('programs.duaAdhkar.description'),
                 icon: Music,
                 gradient: "from-rose-600 to-pink-600",
-                features: ["Morning/Evening Adhkar", "Essential Du'as", "Proper Pronunciation", "Meanings & Context"]
+                features: t('programs.duaAdhkar.features', { returnObjects: true })
               },
               {
-                title: "Fiqh of Worship",
-                subtitle: "Practical Islam",
+                title: t('programs.fiqhWorship.title'),
+                subtitle: t('programs.fiqhWorship.subtitle'),
                 category: "advanced",
-                description: "Detailed study of Islamic worship practices including Salah, Sawm, Zakah, and Hajj.",
+                description: t('programs.fiqhWorship.description'),
                 icon: Activity,
                 gradient: "from-emerald-600 to-teal-600",
-                features: ["Salah in Detail", "Fasting Rules", "Zakah Calculation", "Hajj Overview"]
+                features: t('programs.fiqhWorship.features', { returnObjects: true })
               }
             ].map((program, idx) => (
               <motion.div 
@@ -725,7 +742,7 @@ const Home = () => {
                     whileHover={{ x: 5 }}
                     className="text-blue-600 font-bold text-sm flex items-center gap-2 group/btn"
                   >
-                    <span>Learn More</span>
+                    <span>{t('programs.learnMore')}</span>
                     <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" strokeWidth={3} />
                   </motion.button>
                 </div>
@@ -743,9 +760,9 @@ const Home = () => {
             {...fadeInUp}
             className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-3xl p-12 text-center text-white shadow-2xl"
           >
-            <h3 className="text-3xl font-black mb-4">Can't Find What You're Looking For?</h3>
+            <h3 className="text-3xl font-black mb-4">{t('programs.contactTeam.heading')}</h3>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
-              We offer customized programs tailored to your child's needs. Contact us to discuss specialized learning paths.
+              {t('programs.contactTeam.description')}
             </p>
             <motion.button 
               whileHover={{ scale: 1.05 }}
@@ -753,7 +770,7 @@ const Home = () => {
               className="bg-white text-blue-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl transition-all inline-flex items-center gap-3"
             >
               <MessageCircle size={20} />
-              <span>Contact Our Team</span>
+              <span>{t('programs.contactTeam.buttonText')}</span>
             </motion.button>
           </motion.div>
         </div>
@@ -789,16 +806,16 @@ const Home = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full text-sm font-bold mb-6 backdrop-blur-md shadow-xl"
             >
               <ShieldCheck className="text-blue-300" size={18} />
-              WHY FAMILIES TRUST US
+              {t('whyChooseUs.badge')}
             </motion.div>
             <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-              Why Choose{' '}
+              {t('whyChooseUs.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
-                Markaz-Almubarak
+                {t('whyChooseUs.headingHighlight')}
               </span>
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              A trusted Islamic education center serving the Eastleigh community with excellence and dedication.
+              {t('whyChooseUs.description')}
             </p>
           </motion.div>
 
@@ -806,40 +823,40 @@ const Home = () => {
             <motion.div {...fadeIn} className="space-y-6">
               {[
                 {
-                  title: "Child-Friendly Environment",
-                  description: "Safe, clean, and welcoming spaces specifically designed for young learners to thrive and feel comfortable in their Islamic journey.",
+                  title: t('whyChooseUs.reason1.title'),
+                  description: t('whyChooseUs.reason1.description'),
                   icon: ShieldCheck,
-                  stats: "100% Safe"
+                  stats: t('whyChooseUs.reason1.stats')
                 },
                 {
-                  title: "Structured Curriculum",
-                  description: "Age-appropriate lessons that ensure consistent progress and comprehensive understanding of Islamic knowledge with proven methodologies.",
+                  title: t('whyChooseUs.reason2.title'),
+                  description: t('whyChooseUs.reason2.description'),
                   icon: Target,
-                  stats: "9 Programs"
+                  stats: t('whyChooseUs.reason2.stats')
                 },
                 {
-                  title: "Small Class Sizes",
-                  description: "Personalized attention for every child, ensuring no student is left behind in their learning journey with 1:15 teacher ratio.",
+                  title: t('whyChooseUs.reason3.title'),
+                  description: t('whyChooseUs.reason3.description'),
                   icon: Users,
-                  stats: "Max 15 Students"
+                  stats: t('whyChooseUs.reason3.stats')
                 },
                 {
-                  title: "Eastleigh Community Trust",
-                  description: "Seven years of serving Nairobi families with integrity, authenticity, and religious excellence in Islamic education.",
+                  title: t('whyChooseUs.reason4.title'),
+                  description: t('whyChooseUs.reason4.description'),
                   icon: Star,
-                  stats: "Since 2017"
+                  stats: t('whyChooseUs.reason4.stats')
                 },
                 {
-                  title: "Qualified Teachers",
-                  description: "All our instructors are certified, experienced, and passionate about nurturing the next generation of Muslim learners.",
+                  title: t('whyChooseUs.reason5.title'),
+                  description: t('whyChooseUs.reason5.description'),
                   icon: Award,
-                  stats: "15+ Teachers"
+                  stats: t('whyChooseUs.reason5.stats')
                 },
                 {
-                  title: "Flexible Schedules",
-                  description: "Morning and afternoon sessions available to accommodate different family schedules and student availability.",
+                  title: t('whyChooseUs.reason6.title'),
+                  description: t('whyChooseUs.reason6.description'),
                   icon: Clock,
-                  stats: "2 Sessions Daily"
+                  stats: t('whyChooseUs.reason6.stats')
                 }
               ].map((reason, idx) => (
                 <motion.div 
@@ -878,9 +895,9 @@ const Home = () => {
                 >
                   <Users className="text-white" size={48} strokeWidth={2.5} />
                 </motion.div>
-                <h3 className="text-4xl font-black text-white mb-4">Register for 2024/2025</h3>
+                <h3 className="text-4xl font-black text-white mb-4">{t('whyChooseUs.registration.heading')}</h3>
                 <p className="text-blue-100 mb-8 leading-relaxed text-lg">
-                  Spaces are limited. Secure your child's place in our upcoming intake and give them the gift of authentic Islamic knowledge.
+                  {t('whyChooseUs.registration.description')}
                 </p>
               </div>
               
@@ -888,21 +905,21 @@ const Home = () => {
                 <div className="relative">
                   <input 
                     type="text" 
-                    placeholder="Parent Name" 
+                    placeholder={t('whyChooseUs.registration.parentName')} 
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-blue-200 focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all backdrop-blur-sm"
                   />
                 </div>
                 <div className="relative">
                   <input 
                     type="email" 
-                    placeholder="Email Address" 
+                    placeholder={t('whyChooseUs.registration.email')} 
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-blue-200 focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all backdrop-blur-sm"
                   />
                 </div>
                 <div className="relative">
                   <input 
                     type="tel" 
-                    placeholder="Phone Number" 
+                    placeholder={t('whyChooseUs.registration.phone')} 
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-blue-200 focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all backdrop-blur-sm"
                   />
                 </div>
@@ -910,11 +927,11 @@ const Home = () => {
                   <select 
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-blue-400 focus:bg-white/15 transition-all backdrop-blur-sm appearance-none cursor-pointer"
                   >
-                    <option value="" className="bg-blue-900">Select Program Interest</option>
-                    <option value="hifdh" className="bg-blue-900">Hifdh Program</option>
-                    <option value="islamic-studies" className="bg-blue-900">Islamic Studies</option>
-                    <option value="arabic" className="bg-blue-900">Arabic Language</option>
-                    <option value="all" className="bg-blue-900">All Programs</option>
+                    <option value="" className="bg-blue-900">{t('whyChooseUs.registration.selectProgram')}</option>
+                    <option value="hifdh" className="bg-blue-900">{t('whyChooseUs.registration.programOptions.hifdh')}</option>
+                    <option value="islamic-studies" className="bg-blue-900">{t('whyChooseUs.registration.programOptions.islamicStudies')}</option>
+                    <option value="arabic" className="bg-blue-900">{t('whyChooseUs.registration.programOptions.arabic')}</option>
+                    <option value="all" className="bg-blue-900">{t('whyChooseUs.registration.programOptions.all')}</option>
                   </select>
                   <ChevronRight className="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 text-blue-200 pointer-events-none" size={20} />
                 </div>
@@ -923,11 +940,11 @@ const Home = () => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-5 rounded-xl font-black text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all flex items-center justify-center gap-3"
                 >
-                  <span>Request Enrollment Pack</span>
+                  <span>{t('whyChooseUs.registration.submitButton')}</span>
                   <ArrowRight size={20} strokeWidth={3} />
                 </motion.button>
                 <p className="text-blue-200 text-sm text-center">
-                  By submitting, you agree to receive enrollment information
+                  {t('whyChooseUs.registration.disclaimer')}
                 </p>
               </form>
 
@@ -935,15 +952,15 @@ const Home = () => {
               <div className="grid grid-cols-3 gap-4 mt-10 pt-10 border-t border-white/10">
                 <div className="text-center">
                   <ShieldCheck className="text-blue-300 mx-auto mb-2" size={24} />
-                  <div className="text-white text-xs font-bold">Verified</div>
+                  <div className="text-white text-xs font-bold">{t('whyChooseUs.registration.verified')}</div>
                 </div>
                 <div className="text-center">
                   <Award className="text-blue-300 mx-auto mb-2" size={24} />
-                  <div className="text-white text-xs font-bold">Certified</div>
+                  <div className="text-white text-xs font-bold">{t('whyChooseUs.registration.certified')}</div>
                 </div>
                 <div className="text-center">
                   <Star className="text-blue-300 mx-auto mb-2" size={24} />
-                  <div className="text-white text-xs font-bold">Trusted</div>
+                  <div className="text-white text-xs font-bold">{t('whyChooseUs.registration.trusted')}</div>
                 </div>
               </div>
             </motion.div>
@@ -954,9 +971,9 @@ const Home = () => {
             {...fadeInUp}
             className="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-12 text-center"
           >
-            <h3 className="text-3xl font-black text-white mb-6">Take a Virtual Tour</h3>
+            <h3 className="text-3xl font-black text-white mb-6">{t('whyChooseUs.videoTour.heading')}</h3>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
-              See our facilities, meet our teachers, and experience what makes Markaz-Almubarak special.
+              {t('whyChooseUs.videoTour.description')}
             </p>
             <motion.div 
               whileHover={{ scale: 1.02 }}
@@ -991,42 +1008,42 @@ const Home = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full text-sm font-bold mb-6 shadow-xl"
             >
               <Trophy className="text-white" size={18} />
-              SUCCESS STORIES
+              {t('successStories.badge')}
             </motion.div>
             <h2 className="text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
-              Our Legacy of{' '}
+              {t('successStories.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                Excellence
+                {t('successStories.headingHighlight')}
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Celebrating milestones and community recognition since our founding in 2017.
+              {t('successStories.description')}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {[
               {
-                title: "Annual Graduations",
-                description: "Honoring our Hifdh students in grand ceremonies with local scholars and community leaders.",
+                title: t('successStories.achievement1.title'),
+                description: t('successStories.achievement1.description'),
                 icon: GraduationCap,
-                highlight: "50+ Graduates",
+                highlight: t('successStories.achievement1.highlight'),
                 gradient: "from-blue-600 to-blue-700",
                 image: "🎓"
               },
               {
-                title: "Parent Participation",
-                description: "Regular workshops and seminars to bridge the gap between home learning and madrasa education.",
+                title: t('successStories.achievement2.title'),
+                description: t('successStories.achievement2.description'),
                 icon: Users,
-                highlight: "Monthly Events",
+                highlight: t('successStories.achievement2.highlight'),
                 gradient: "from-cyan-600 to-cyan-700",
                 image: "👨‍👩‍👧‍👦"
               },
               {
-                title: "Regional Recognition",
-                description: "Ranked as one of Eastleigh's most trusted centers for authentic Islamic knowledge and education.",
+                title: t('successStories.achievement3.title'),
+                description: t('successStories.achievement3.description'),
                 icon: Award,
-                highlight: "Top Rated",
+                highlight: t('successStories.achievement3.highlight'),
                 gradient: "from-indigo-600 to-indigo-700",
                 image: "🏆"
               }
@@ -1099,7 +1116,7 @@ const Home = () => {
           {/* Parent Testimonials */}
           <motion.div {...fadeIn}>
             <h3 className="text-4xl font-black text-blue-900 text-center mb-12">
-              What Parents Say About Us
+              {t('successStories.testimonialsHeading')}
             </h3>
             
             <div className="max-w-5xl mx-auto">
@@ -1163,10 +1180,10 @@ const Home = () => {
             {/* Statistics Grid */}
             <div className="grid md:grid-cols-4 gap-6 mt-20">
               {[
-                { label: "Parent Satisfaction", value: "98%", icon: Heart },
-                { label: "Student Retention", value: "95%", icon: Users },
-                { label: "Graduation Rate", value: "92%", icon: GraduationCap },
-                { label: "Community Rating", value: "4.9/5", icon: Star }
+                { label: t('successStories.statistics.parentSatisfaction'), value: "98%", icon: Heart },
+                { label: t('successStories.statistics.studentRetention'), value: "95%", icon: Users },
+                { label: t('successStories.statistics.graduationRate'), value: "92%", icon: GraduationCap },
+                { label: t('successStories.statistics.communityRating'), value: "4.9/5", icon: Star }
               ].map((stat, idx) => (
                 <motion.div 
                   key={idx}
@@ -1215,14 +1232,14 @@ const Home = () => {
             </motion.div>
             
             <h2 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
-              Give Your Child the Gift of{' '}
+              {t('cta.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-200">
-                Islamic Knowledge
+                {t('cta.headingHighlight')}
               </span>
             </h2>
             
             <p className="text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Join hundreds of families in Eastleigh who have entrusted their children's spiritual growth and Islamic education to Markaz-Almubarak.
+              {t('cta.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
@@ -1231,7 +1248,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-900 px-14 py-6 rounded-xl font-black text-xl hover:shadow-2xl hover:shadow-white/30 transition-all flex items-center justify-center gap-3 group"
               >
-                <span>Register Now</span>
+                <span>{t('cta.registerButton')}</span>
                 <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" strokeWidth={3} />
               </motion.button>
               <motion.button 
@@ -1240,17 +1257,16 @@ const Home = () => {
                 className="bg-blue-500/20 border-2 border-white/30 text-white px-14 py-6 rounded-xl font-bold text-xl hover:bg-blue-500/30 transition-all backdrop-blur-md flex items-center justify-center gap-3"
               >
                 <Phone size={24} />
-                <span>Contact the Center</span>
+                <span>{t('cta.contactButton')}</span>
               </motion.button>
             </div>
             
             {/* Benefits Grid */}
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-              {[
-                { icon: ShieldCheck, text: "Walk-ins welcome" },
-                { icon: Gift, text: "Flexible payment plans" },
-                { icon: Bell, text: "Limited spaces available" }
-              ].map((item, idx) => (
+              {t('cta.benefits', { returnObjects: true }).map((text, idx) => {
+                const icons = [ShieldCheck, Gift, Bell];
+                const Icon = icons[idx];
+                return (
                 <motion.div 
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
@@ -1259,18 +1275,19 @@ const Home = () => {
                   viewport={{ once: true }}
                   className="flex items-center justify-center gap-3 text-white bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20"
                 >
-                  <item.icon size={20} className="text-blue-300" />
-                  <span className="font-bold">{item.text}</span>
+                  <Icon size={20} className="text-blue-300" />
+                  <span className="font-bold">{text}</span>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Contact Methods */}
             <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-white/10">
               {[
-                { icon: Phone, text: "+254 7XX XXX XXX", label: "Call Us" },
-                { icon: Mail, text: "info@markaz-almubarak.com", label: "Email Us" },
-                { icon: MapPin, text: "Eastleigh Sec 3, Nairobi", label: "Visit Us" }
+                { icon: Phone, text: "+254 7XX XXX XXX", label: t('cta.callUs') },
+                { icon: Mail, text: "info@markaz-almubarak.com", label: t('cta.emailUs') },
+                { icon: MapPin, text: "Eastleigh Sec 3, Nairobi", label: t('cta.visitUs') }
               ].map((contact, idx) => (
                 <motion.div 
                   key={idx}
@@ -1307,7 +1324,7 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-blue-200 max-w-md leading-relaxed mb-6 italic text-base">
-                "Nurturing the hearts of the Ummah with authentic knowledge according to the Qur'an and Sunnah."
+                "{t('footer.tagline')}"
               </p>
               
               {/* Social Links */}
@@ -1334,18 +1351,25 @@ const Home = () => {
             <div>
               <h5 className="text-white font-black text-lg mb-6 flex items-center gap-2">
                 <Layout size={20} className="text-blue-400" />
-                Quick Links
+                {t('footer.quickLinks.heading')}
               </h5>
               <ul className="space-y-3">
-                {['About Us', 'Our Programs', 'Admissions', 'Success Stories', 'Contact', 'FAQ'].map(item => (
-                  <li key={item}>
+                {[
+                  { key: 'aboutUs', label: t('footer.quickLinks.aboutUs') },
+                  { key: 'programs', label: t('footer.quickLinks.ourPrograms') },
+                  { key: 'admissions', label: t('footer.quickLinks.admissions') },
+                  { key: 'successStories', label: t('footer.quickLinks.successStories') },
+                  { key: 'contact', label: t('footer.quickLinks.contact') },
+                  { key: 'faq', label: t('footer.quickLinks.faq') }
+                ].map(item => (
+                  <li key={item.key}>
                     <motion.a 
-                      href={`#${item.toLowerCase().replace(' ', '-')}`}
+                      href={`#${item.key.toLowerCase().replace(/([A-Z])/g, '-$1').toLowerCase()}`}
                       whileHover={{ x: 5 }}
                       className="text-blue-200 hover:text-white transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRight size={16} className="text-blue-400 group-hover:text-blue-300" />
-                      <span className="font-medium">{item}</span>
+                      <span className="font-medium">{item.label}</span>
                     </motion.a>
                   </li>
                 ))}
@@ -1356,18 +1380,25 @@ const Home = () => {
             <div>
               <h5 className="text-white font-black text-lg mb-6 flex items-center gap-2">
                 <BookOpen size={20} className="text-blue-400" />
-                Our Programs
+                {t('footer.programs.heading')}
               </h5>
               <ul className="space-y-3">
-                {['Hifdh Program', 'Tajweed Classes', 'Islamic Studies', 'Arabic Language', 'Character Building', 'Fiqh & Aqeedah'].map(item => (
-                  <li key={item}>
+                {[
+                  { key: 'hifdh', label: t('footer.programs.hifdh') },
+                  { key: 'tajweed', label: t('footer.programs.tajweed') },
+                  { key: 'islamicStudies', label: t('footer.programs.islamicStudies') },
+                  { key: 'arabic', label: t('footer.programs.arabic') },
+                  { key: 'character', label: t('footer.programs.character') },
+                  { key: 'fiqh', label: t('footer.programs.fiqhAqeedah') }
+                ].map(item => (
+                  <li key={item.key}>
                     <motion.a 
                       href="#programs"
                       whileHover={{ x: 5 }}
                       className="text-blue-200 hover:text-white transition-colors flex items-center gap-2 group"
                     >
                       <CheckCircle size={14} className="text-blue-400 group-hover:text-blue-300" />
-                      <span className="font-medium">{item}</span>
+                      <span className="font-medium">{item.label}</span>
                     </motion.a>
                   </li>
                 ))}
@@ -1378,35 +1409,35 @@ const Home = () => {
             <div>
               <h5 className="text-white font-black text-lg mb-6 flex items-center gap-2">
                 <Phone size={20} className="text-blue-400" />
-                Contact Info
+                {t('footer.contactInfo.heading')}
               </h5>
               <div className="space-y-5">
                 <div className="flex items-start gap-3 text-blue-200">
                   <MapPin className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <div className="font-bold text-white mb-1">Address</div>
-                    <span className="text-sm">Eastleigh Section 3<br />Nairobi, Kenya</span>
+                    <div className="font-bold text-white mb-1">{t('footer.contactInfo.addressLabel')}</div>
+                    <span className="text-sm" dangerouslySetInnerHTML={{ __html: t('footer.contactInfo.addressText').replace(/\n/g, '<br />') }}></span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-blue-200">
                   <Phone className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <div className="font-bold text-white mb-1">Phone</div>
-                    <span className="text-sm">+254 7XX XXX XXX</span>
+                    <div className="font-bold text-white mb-1">{t('footer.contactInfo.phoneLabel')}</div>
+                    <span className="text-sm">{t('footer.contactInfo.phoneText')}</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-blue-200">
                   <Mail className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <div className="font-bold text-white mb-1">Email</div>
-                    <span className="text-sm">info@markaz-almubarak.com</span>
+                    <div className="font-bold text-white mb-1">{t('footer.contactInfo.emailLabel')}</div>
+                    <span className="text-sm">{t('footer.contactInfo.emailText')}</span>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 text-blue-200">
                   <Clock className="text-blue-400 flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <div className="font-bold text-white mb-1">Hours</div>
-                    <span className="text-sm">Mon - Fri: 8:00 AM - 4:00 PM<br />Sat: 9:00 AM - 1:00 PM</span>
+                    <div className="font-bold text-white mb-1">{t('footer.contactInfo.hoursLabel')}</div>
+                    <span className="text-sm" dangerouslySetInnerHTML={{ __html: t('footer.contactInfo.hoursText').replace(/\n/g, '<br />') }}></span>
                   </div>
                 </div>
               </div>
@@ -1422,14 +1453,14 @@ const Home = () => {
               <div>
                 <h4 className="text-2xl font-black text-white mb-2 flex items-center gap-2">
                   <Bell className="text-blue-400" size={24} />
-                  Stay Updated
+                  {t('footer.newsletter.heading')}
                 </h4>
-                <p className="text-blue-200">Subscribe to our newsletter for updates on events, programs, and Islamic resources.</p>
+                <p className="text-blue-200">{t('footer.newsletter.description')}</p>
               </div>
               <div className="flex gap-3">
                 <input 
                   type="email" 
-                  placeholder="Enter your email" 
+                  placeholder={t('footer.newsletter.placeholder')} 
                   className="flex-grow bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-blue-300 focus:outline-none focus:border-blue-400 transition-all"
                 />
                 <motion.button 
@@ -1437,7 +1468,7 @@ const Home = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl transition-all flex items-center gap-2"
                 >
-                  <span>Subscribe</span>
+                  <span>{t('footer.newsletter.buttonText')}</span>
                   <ArrowRight size={20} />
                 </motion.button>
               </div>
@@ -1447,17 +1478,17 @@ const Home = () => {
           {/* Bottom Footer */}
           <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-blue-300 text-sm">
-              © {new Date().getFullYear()} Markaz-Almubarak Islamic Education Center. All rights reserved.
+              {t('footer.copyright')}
             </p>
             <div className="flex gap-8 text-blue-300 text-sm">
               <motion.a href="#" whileHover={{ scale: 1.05 }} className="hover:text-white transition-colors font-medium">
-                Privacy Policy
+                {t('footer.privacyPolicy')}
               </motion.a>
               <motion.a href="#" whileHover={{ scale: 1.05 }} className="hover:text-white transition-colors font-medium">
-                Terms of Service
+                {t('footer.termsOfService')}
               </motion.a>
               <motion.a href="#" whileHover={{ scale: 1.05 }} className="hover:text-white transition-colors font-medium">
-                Enrollment Terms
+                {t('footer.enrollmentTerms')}
               </motion.a>
             </div>
           </div>
@@ -1465,7 +1496,7 @@ const Home = () => {
           {/* Credits */}
           <div className="mt-8 text-center">
             <p className="text-blue-400 text-xs">
-              Designed with ❤️ for the Muslim Community • Built with React & Tailwind CSS
+              {t('footer.credits')}
             </p>
           </div>
         </div>

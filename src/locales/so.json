@@ -1,0 +1,401 @@
+{
+  "nav": {
+    "home": "Guriga",
+    "programs": "Barnaamijyada",
+    "about": "Ku saabsan",
+    "success": "Guusha",
+    "contact": "Xiriir",
+    "enrollNow": "Isdiiwaangeli Hadda",
+    "brandName": "Markaz-Almubarak",
+    "brandSubtitle": "XARUNTA WAXBARASHADA ISLAAMKA"
+  },
+  "hero": {
+    "badge": "Heerkulka Sare ilaa 2017 • Eastleigh, Nairobi",
+    "title1": "Barbaarinta",
+    "title2": "Qalbiyada Dhalinyarada",
+    "title3": "iftiinka",
+    "title4": "Qur'aanka iyo Sunnada",
+    "description": "Bixinta waxbarasho Islaam oo qaabaysan oo carruur-friendly ah jiilka soo socda. Waxaan diirada saarayaa aqoonta saxda ah, dhisida dabeecadda, iyo heerka waxbarasho ee ugu sarreeya sida Qur'aanka iyo Sunnada.",
+    "enrollButton": "Isdiiwaangeli Ilmahaaga Maanta",
+    "exploreButton": "Sahami Barnaamijyada",
+    "stats": {
+      "students": "Ardayda",
+      "years": "Sanado",
+      "certified": "Shahaado leh"
+    }
+  },
+  "features": {
+    "islamicStudies": "Waxbarashada Islaamka",
+    "comprehensiveCurriculum": "Manhaj Dhamaystiran",
+    "hifdh": {
+      "title": "Barnaamijka Xifdhida",
+      "subtitle": "Xasuusinta Qur'aanka"
+    },
+    "akhlaq": {
+      "title": "Akhlaq iyo Dabeecad",
+      "subtitle": "Dhisida Dabeecadda"
+    },
+    "aqeedah": {
+      "title": "Aqiidah iyo Fiqh",
+      "subtitle": "Aqoonta Islaamka"
+    },
+    "arabic": {
+      "title": "Luuqadda Carabiga",
+      "subtitle": "Luuqadda Qur'aanka"
+    }
+  },
+  "testimonials": {
+    "parent1": {
+      "text": "Wiilkaygu wuu isbadalay gebi ahaanba tan iyo markuu ku biiraray Markaz-Almubarak. Dabeecadiisa, nidaamkiisa, iyo jacaylkiisa Qur'aanka ayaa aad u koray.",
+      "parent": "Fatima Ahmed",
+      "location": "Eastleigh Qaybta 3"
+    },
+    "parent2": {
+      "text": "Macallimiintu waa dad aqoon badan, dulqaad leh, oo run ahaantii daryeela horumarka ilmo kasta. Ma heli kari lahaa waxbarasho Islaam oo ka wanaagsan tan gabadhaydii.",
+      "parent": "Hassan Ibrahim",
+      "location": "Eastleigh Qaybta 2"
+    },
+    "parent3": {
+      "text": "Arkitaanka carruurta iga qalin jabiya Xifdh-ka ayaa ahaa wakhtiga aan ugu faraxsanaa noloshaydii. JazakAllah khair guud ahaan kooxda.",
+      "parent": "Amina Mohamed",
+      "location": "Eastleigh Qaybta 1"
+    },
+    "parent4": {
+      "text": "Manhajka habaysan iyo deegaanka daryeelka leh ayaa sameeyay farqi dhammaan. Gabadheennu waxay jeceshahay inay fasalka tagto maalin kasta!",
+      "parent": "Omar Khalid",
+      "location": "Eastleigh Qaybta 4"
+    }
+  },
+  "events": {
+    "annualGraduation": "Xaflad Qalin-jabinta Sannad",
+    "quranCompetition": "Tartanka Qur'aanka",
+    "parentWorkshop": "Tababarka Waalidiinta",
+    "ramadanProgram": "Barnaamijka Gaarka ah ee Ramadan",
+    "types": {
+      "graduation": "Qalin-jabin",
+      "competition": "Tartan",
+      "workshop": "Tababar",
+      "special": "Gaar ah"
+    }
+  },
+  "stats": {
+    "activeStudents": {
+      "value": "250+",
+      "label": "Ardayda Firfircoon",
+      "sublabel": "Isdiiwaangeliyay sanadkan"
+    },
+    "yearsExcellence": {
+      "value": "7+",
+      "label": "Sanado Heerkulka Sare",
+      "sublabel": "Tan iyo 2017"
+    },
+    "certifiedStaff": {
+      "value": "100%",
+      "label": "Shaqaalaha Shahaado leh",
+      "sublabel": "Macallimiin u qalma"
+    },
+    "hifdh": {
+      "value": "50+",
+      "label": "Qalin-jabiyayaasha Xifdhiga",
+      "sublabel": "Guuleyste aan ku faano"
+    },
+    "teachers": {
+      "value": "15+",
+      "label": "Macallimiin Khabiir ah",
+      "sublabel": "Macallimiin u heellan"
+    },
+    "satisfaction": {
+      "value": "98%",
+      "label": "Heerka Qanacsanaanta",
+      "sublabel": "Jawaab celinta waalidiinta"
+    }
+  },
+  "trustMetrics": {
+    "badge": "GUULIHII AANU GAADHNEY",
+    "heading": "Dhisida Kalsoonida Iyada oo Loo Marayo",
+    "headingHighlight": "Heerkulka Sare",
+    "description": "Sanado badan oo ay ku dadaaleen waxbarashada Islaamka ee saxda ah ayaa nagu dhigtay xarun lagu kalsoon yahay bulshada dhexdeeda.",
+    "fastTrack": {
+      "title": "Waxbarasho Degdeg ah",
+      "description": "Barnaamijyo degdeg ah ardayda dadaalka badan"
+    },
+    "goalOriented": {
+      "title": "Ujeedo Wato",
+      "description": "Tilmaamo cad iyo la socodka guulaha"
+    },
+    "caringEnvironment": {
+      "title": "Deegaan Daryeel leh",
+      "description": "Jawi nafaqeeya koboca ruuxa"
+    }
+  },
+  "programs": {
+    "badge": "BARNAAMIJYADAYADA",
+    "heading": "Waxbarasho Islaam oo",
+    "headingHighlight": "Dhamaystiran",
+    "description": "Manhaj dhamaystiran oo loogu talagalay in lagu kormiyo koboca ruuxiga iyo heerka waxbarasho ee ardayda.",
+    "learnMore": "Wax Badan Baro",
+    "filters": {
+      "all": "Dhammaan Barnaamijyada",
+      "core": "Aasaasi",
+      "advanced": "Horumarsan",
+      "language": "Luqad"
+    },
+    "quranMemorization": {
+      "title": "Xasuusinta Qur'aanka",
+      "subtitle": "Barnaamijka Xifdhiga",
+      "description": "Xasuusin nidaam leh oo diiradda saarta hayista, fahamka, iyo xiriirka ruuxiga ah ee erayada Alle iyada oo la adeegsanayo habab la xaqiijiyay.",
+      "features": [
+        "Fadhi Dib-u-eegis Maalinle",
+        "Xirfadda Tajwiidka",
+        "Hagitaanka Ruuxi",
+        "La socodka Horumarka"
+      ]
+    },
+    "hadithStudies": {
+      "title": "Waxbarashada Xadiiska",
+      "subtitle": "Raacitaanka Sunnada",
+      "description": "Sahaminaya hadalka iyo ficilada Nabiga Muhammad ﷺ si loo helo hago nolol maalmeedka ah oo leh ilo la xaqiijiyay.",
+      "features": [
+        "Ilo La Xaqiijiyay",
+        "Codsiga Ficliga ah",
+        "Horumarinta Dabeecadda",
+        "Ku Dhaqanka Maalinle"
+      ]
+    },
+    "qiraatTajweed": {
+      "title": "Qira'at & Tajwiid",
+      "subtitle": "Akhriska Quruxda badan",
+      "description": "Xirfadaha xeerarka akhriska saxda ah iyo qurxinta aayaadka Qur'aanka iyada oo leh tababar takhasusnimo leh.",
+      "features": [
+        "Xirfadda Dhawaaqa",
+        "Wax ka beddelka Codka",
+        "Akhris Macaan",
+        "Tababar Keli-ah"
+      ]
+    },
+    "aqeedahFiqh": {
+      "title": "Aqiidah & Fiqh Islaamka",
+      "subtitle": "Caqiido & Xukumo",
+      "description": "Dhisida aasaas adag oo caqiidada Islaamka ah iyo fahamka xukumada diinta ee nolol maalmeedka.",
+      "features": [
+        "Caqiido Saxan",
+        "Xukumo Maalinle",
+        "Haga Culimo",
+        "Fadhi Su'aalo & Jawaabo"
+      ]
+    },
+    "islamicCharacter": {
+      "title": "Dabeecadda Islaamka",
+      "subtitle": "Akhlaq & Edeb",
+      "description": "Kobcinta dabeecad sharaf leh, nidaam, iyo shakhsi u adeegsada oo salka ku haya tacliinta Islaamka.",
+      "features": [
+        "Dabeecadda Nabiga",
+        "Wanaagga Anshaxa",
+        "Edebka Bulshada",
+        "Xirfadaha Hogaanka"
+      ]
+    },
+    "arabicLanguage": {
+      "title": "Luuqadda Carabiga",
+      "subtitle": "Luuqadda Qur'aanka",
+      "description": "Fahamka luuqadda waxyaabaha la soo dejiyo si loo qooriyo aragga ruuxiga ah iyo fahamka qoraallada Islaamka.",
+      "features": [
+        "Aasaaska Naxwaha",
+        "Dhisida Erayada",
+        "Carabi Qur'aaneed",
+        "Ku Celcelinta Wadahadalka"
+      ]
+    },
+    "islamicHistory": {
+      "title": "Taariikhda Islaamka",
+      "subtitle": "Sheekooyinka Nabiyada",
+      "description": "Wax ka bartida nolosha Nabiyada iyo asxaabta si loo dhiirigeliyo loona hago dhalinyarada Muslimka ah ee casriga ah.",
+      "features": [
+        "Sheekooyinka Nabiyada",
+        "Nolosha Asxaabta",
+        "Dhacdooyinka Taariikhiga ah",
+        "Casharada Nolosha"
+      ]
+    },
+    "duaAdhkar": {
+      "title": "Ducada & Adhkaarka",
+      "subtitle": "Xusuusta Maalinle",
+      "description": "Xasuusinta ducooyin iyo baryo muhiim ah ee xiriirka maalinle ee ruuxiga ah ee Alle.",
+      "features": [
+        "Adhkaar Subax/Fiid",
+        "Ducooyin Muhiim ah",
+        "Ku Dhawaaqa Saxda ah",
+        "Macno & Xaalad"
+      ]
+    },
+    "fiqhWorship": {
+      "title": "Fiqhka Caabudka",
+      "subtitle": "Islaamka Ficliga ah",
+      "description": "Daraasad faahfaahsan oo ku saabsan hawlaha caabudka Islaamka oo ay ku jiraan Salaadda, Soonka, Zakada, iyo Xajka.",
+      "features": [
+        "Salaadda si Faahfaahsan",
+        "Xeerarka Soonka",
+        "Xisaabinta Zakada",
+        "Dulmar Guud ee Xajka"
+      ]
+    },
+    "contactTeam": {
+      "heading": "Ma Heli kartid Waxaad Raadineyso?",
+      "description": "Waxaan bixinaa barnaamijyo gaara loo habeeyay baahiyaha ilmahaaga. Nala soo xidhiidh si aan ugala wadahadalno waddooyin waxbarasho gaara ah.",
+      "buttonText": "La Xiriir Kooxdayada"
+    }
+  },
+  "whyChooseUs": {
+    "badge": "MAXAY QOYSASKU NAGU KALSOON YIHIIN",
+    "heading": "Maxay U Doorataa",
+    "headingHighlight": "Markaz-Almubarak",
+    "description": "Xarunta waxbarashada Islaamka ee la kalsoon yahay oo u adeegta bulshada Eastleigh iyaga oo leh heerkulka sare iyo dadaal.",
+    "reason1": {
+      "title": "Deegaan Carruur-Saaxiibeed",
+      "description": "Meelo ammaan ah, nadiif ah, oo soo dhaweyn leh oo si gaar ah loogu qaabeeyay in barashayaasha yaryar ay ku kobcaan oo ku noolaadaan safarkooda Islaamka.",
+      "stats": "100% Ammaan"
+    },
+    "reason2": {
+      "title": "Manhaj Qaabaysan",
+      "description": "Casharado da'da u habboon oo hubinaya horumar joogto ah iyo faham dhamaystiran oo aqoonta Islaamka ah oo leh habab la xaqiijiyay.",
+      "stats": "9 Barnaamij"
+    },
+    "reason3": {
+      "title": "Fasallo Yaryar",
+      "description": "Dareen gaar ah oo ilmo kasta, hubinaya in aan arday la tegin meelna fasalkooda waxbarashada 1:15 macalin iyo arday.",
+      "stats": "Ugu badan 15 Arday"
+    },
+    "reason4": {
+      "title": "Kalsoonida Bulshada Eastleigh",
+      "description": "Toddoba sano oo u adeegis qoysaska Nairobi iyagoo leh daacadnimo, run ahaanshiyaha, iyo heerkulka diinta ee waxbarashada Islaamka.",
+      "stats": "Tan iyo 2017"
+    },
+    "reason5": {
+      "title": "Macallimiin Shahaado leh",
+      "description": "Dhammaan macallimiinteena waa kuwo shahaado leh, khibrad leh, oo jacayl u qaba barbaarinta jiilka soo socda ee barashayaasha Muslimka ah.",
+      "stats": "15+ Macallimiin"
+    },
+    "reason6": {
+      "title": "Jadwal Dabacsanaan leh",
+      "description": "Fadhi subax iyo galabnimo ayaa la heli karaa si loogu habbeeyo jadwalka qoyska kala duwan iyo helitaanka ardayda.",
+      "stats": "2 Fadhi Maalinle"
+    },
+    "registration": {
+      "heading": "Isdiiwaangeli Sanadka 2024/2025",
+      "description": "Meelahu way yaraadeen. Aamin u hel ilmahaaga meel ku jirta qaadashada soo socota oo sii ugu hadiyadee aqoonta Islaamka ee saxda ah.",
+      "parentName": "Magaca Waalidka",
+      "email": "Cinwaanka Emailka",
+      "phone": "Nambarka Telefoonka",
+      "selectProgram": "Dooro Xiisaha Barnaamijka",
+      "programOptions": {
+        "hifdh": "Barnaamijka Xifdhiga",
+        "islamicStudies": "Waxbarashada Islaamka",
+        "arabic": "Luuqadda Carabiga",
+        "all": "Dhammaan Barnaamijyada"
+      },
+      "submitButton": "Codsada Xirmada Isdiiwaangelinta",
+      "disclaimer": "Markii aad soo gudbiso, waxaad ogolaanaysaa inaad hesho macluumaadka isdiiwaangelinta",
+      "verified": "La Xaqiijiyay",
+      "certified": "Shahaado leh",
+      "trusted": "La Kalsoon yahay"
+    },
+    "videoTour": {
+      "heading": "Qaado Dalxiis Virtual ah",
+      "description": "Arag xarumahayaga, kula kulam macallimiinta, oo la kulanto waxa Markaz-Almubarak gaara ka dhigaya."
+    }
+  },
+  "successStories": {
+    "badge": "SHEEKOOYINKA GUUSHA",
+    "heading": "Dhaxalka",
+    "headingHighlight": "Heerkulka Sare",
+    "description": "U dabbaaldagida tilmaamaha iyo aqoonsiga bulshada tan iyo aasaaskayaga 2017.",
+    "achievement1": {
+      "title": "Qalin-jabinaha Sannadkasta",
+      "highlight": "50+ Qalin-jabiyayaal",
+      "description": "U murugaysanaya ardaydayada Xifdh-ga xafladaha waaweyn ee culimo maxalliga ah iyo hogaamiyeyaasha bulshada."
+    },
+    "achievement2": {
+      "title": "Ka Qaybqaadashada Waalidiinta",
+      "highlight": "Dhacdooyin Bishaale",
+      "description": "Aqoon isweydaarsiyo joogto ah iyo shir-wadaallo si loo buuxiyo farqiga u dhexeeya waxbarashada guriga iyo waxbarashada machadka."
+    },
+    "achievement3": {
+      "title": "Aqoonsi Goboleed",
+      "highlight": "Qiimayn Sare",
+      "description": "Loo tiriyay mid ka mid ah xarumaha Eastleigh ugu kalsoon ee aqoonta Islaamka ee saxda ah iyo waxbarashada."
+    },
+    "upcomingEventsHeading": "Dhacdooyinka Soo socda",
+    "testimonialsHeading": "Waxa Waalidiintu Ka Yiraahdaan",
+    "statistics": {
+      "parentSatisfaction": "Qanacsanaanta Waalidiinta",
+      "studentRetention": "Haynta Ardayda",
+      "graduationRate": "Heerka Qalin-jabinta",
+      "communityRating": "Qiimaynta Bulshada"
+    }
+  },
+  "cta": {
+    "heading": "Sii Ilmahaaga Hadiyadda",
+    "headingHighlight": "Aqoonta Islaamka",
+    "description": "Ku biir boqolaal qoys oo Eastleigh ah oo u dhiibay koboca ruuxiga ah ee carruurtooda iyo waxbarashada Islaamka Markaz-Almubarak.",
+    "registerButton": "Isdiiwaangeli Hadda",
+    "contactButton": "La Xiriir Xarunta",
+    "benefits": [
+      "Soo-booqasho aan ballan lahayn ayaa lagu soo dhaweynayaa",
+      "Qorshayaal lacag bixinta dabacsanaanta leh",
+      "Meelo yaryar ayaa hara"
+    ],
+    "callUs": "Noo Wac",
+    "emailUs": "Email Noo Soo Dir",
+    "visitUs": "Na Soo Booqo"
+  },
+  "footer": {
+    "tagline": "Barbaarinta qalbiga Ummadda aqoonta saxda ah sida Qur'aanka iyo Sunnada.",
+    "quickLinks": {
+      "heading": "Xidhiidhyo Degdeg ah",
+      "aboutUs": "Naga Waran",
+      "ourPrograms": "Barnaamijyadayada",
+      "admissions": "Qaadashada",
+      "successStories": "Sheekooyinka Guusha",
+      "contact": "Xiriir",
+      "faq": "Su'aalaha Badanaa La Isweydiiyo"
+    },
+    "programs": {
+      "heading": "Barnaamijyadayada",
+      "hifdh": "Barnaamijka Xifdhiga",
+      "tajweed": "Fasallada Tajwiidka",
+      "islamicStudies": "Waxbarashada Islaamka",
+      "arabic": "Luuqadda Carabiga",
+      "character": "Dhisida Dabeecadda",
+      "fiqhAqeedah": "Fiqh & Aqiidah"
+    },
+    "contactInfo": {
+      "heading": "Macluumaadka Xiriirka",
+      "addressLabel": "Cinwaanka",
+      "addressText": "Eastleigh Qaybta 3\\nNairobi, Kenya",
+      "phoneLabel": "Telefoon",
+      "phoneText": "+254 7XX XXX XXX",
+      "emailLabel": "Email",
+      "emailText": "info@markaz-almubarak.com",
+      "hoursLabel": "Saacadaha",
+      "hoursText": "Isn - Jim: 8:00 AM - 4:00 PM\\nSab: 9:00 AM - 1:00 PM"
+    },
+    "newsletter": {
+      "heading": "Sii Cusbooneysii",
+      "description": "Ku qor warqaddayada si aad u hesho wararka dhacdooyinka, barnaamijyada, iyo kheyraadka Islaamka.",
+      "placeholder": "Geli emailkaaga",
+      "buttonText": "Isdiiwaangeli"
+    },
+    "copyright": "© 2024 Markaz-Almubarak Xarunta Waxbarashada Islaamka. Dhammaan xuquuqda way dhawran yihiin.",
+    "privacyPolicy": "Qaynuunka Sirta",
+    "termsOfService": "Shuruudaha Adeega",
+    "enrollmentTerms": "Shuruudaha Isdiiwaangelinta",
+    "credits": "Naqshadaynta ❤️ Bulshada Muslimka ah"
+  },
+  "language": {
+    "select": "Dooro Luuqad",
+    "english": "Ingiriisi",
+    "somali": "Soomaali",
+    "arabic": "Carabi",
+    "kiswahili": "Kiswahili"
+  }
+}
