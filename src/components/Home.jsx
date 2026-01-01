@@ -217,6 +217,7 @@ const Home = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     href={`#${item.href}`}
+                    onClick={() => setIsMenuOpen(false)}
                     className="block text-gray-700 font-bold hover:text-blue-600 transition-colors py-2 px-4 rounded-lg hover:bg-blue-50"
                   >
                     {item.name}
@@ -225,8 +226,10 @@ const Home = () => {
                 <div className="pt-2 pb-2">
                   <LanguageSelector />
                 </div>
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all mt-4">
-                  {t('nav.enrollNow')}
+                <button 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all mt-4"
+                >{t('nav.enrollNow')}
                 </button>
               </div>
             </motion.div>
@@ -295,7 +298,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8"
             >
               {t('hero.title1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-200">
                 {t('hero.title2')}
@@ -309,7 +312,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="text-xl text-blue-100 mb-10 leading-relaxed max-w-xl"
+              className="text-base sm:text-lg md:text-xl text-blue-100 mb-10 leading-relaxed max-w-xl"
             >
               {t('hero.description')}
             </motion.p>
@@ -318,12 +321,12 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-5"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5"
             >
               <motion.button 
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-900 px-10 py-5 rounded-xl font-black text-lg hover:shadow-2xl hover:shadow-white/30 transition-all flex items-center gap-3 group"
+                className="bg-white text-blue-900 px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-black text-base sm:text-lg hover:shadow-2xl hover:shadow-white/30 transition-all flex items-center justify-center gap-3 group w-full sm:w-auto"
               >
                 <span>{t('hero.enrollButton')}</span>
                 <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform" strokeWidth={3} />
@@ -331,7 +334,7 @@ const Home = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-blue-500/20 border-2 border-white/30 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-500/30 transition-all backdrop-blur-md"
+                className="bg-blue-500/20 border-2 border-white/30 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg hover:bg-blue-500/30 transition-all backdrop-blur-md w-full sm:w-auto"
               >
                 {t('hero.exploreButton')}
               </motion.button>
@@ -486,7 +489,7 @@ const Home = () => {
               <Trophy className="text-blue-600" size={18} />
               {t('trustMetrics.badge')}
             </motion.div>
-            <h2 className="text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
               {t('trustMetrics.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
                 {t('trustMetrics.headingHighlight')}
@@ -582,7 +585,7 @@ const Home = () => {
               <BookOpen className="text-white" size={18} />
               {t('programs.badge')}
             </motion.div>
-            <h2 className="text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
               {t('programs.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
                 {t('programs.headingHighlight')}
@@ -808,14 +811,13 @@ const Home = () => {
               <ShieldCheck className="text-blue-300" size={18} />
               {t('whyChooseUs.badge')}
             </motion.div>
-            <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               {t('whyChooseUs.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
                 {t('whyChooseUs.headingHighlight')}
               </span>
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              {t('whyChooseUs.description')}
+            <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">{t('whyChooseUs.description')}
             </p>
           </motion.div>
 
@@ -886,7 +888,7 @@ const Home = () => {
 
             <motion.div 
               {...scaleIn}
-              className="bg-white/10 backdrop-blur-2xl border border-white/20 p-12 rounded-3xl shadow-2xl"
+              className="bg-white/10 backdrop-blur-2xl border border-white/20 p-6 sm:p-8 md:p-12 rounded-3xl shadow-2xl"
             >
               <div className="text-center mb-10">
                 <motion.div 
@@ -895,7 +897,7 @@ const Home = () => {
                 >
                   <Users className="text-white" size={48} strokeWidth={2.5} />
                 </motion.div>
-                <h3 className="text-4xl font-black text-white mb-4">{t('whyChooseUs.registration.heading')}</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4">{t('whyChooseUs.registration.heading')}</h3>
                 <p className="text-blue-100 mb-8 leading-relaxed text-lg">
                   {t('whyChooseUs.registration.description')}
                 </p>
@@ -1010,14 +1012,13 @@ const Home = () => {
               <Trophy className="text-white" size={18} />
               {t('successStories.badge')}
             </motion.div>
-            <h2 className="text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-blue-900 mb-6 leading-tight">
               {t('successStories.heading')}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
                 {t('successStories.headingHighlight')}
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {t('successStories.description')}
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{t('successStories.description')}
             </p>
           </motion.div>
 
@@ -1127,20 +1128,19 @@ const Home = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
-                  className="bg-gradient-to-br from-blue-50 to-white p-12 rounded-3xl shadow-xl border border-blue-200 relative overflow-hidden"
+                  className="bg-gradient-to-br from-blue-50 to-white p-6 sm:p-8 md:p-12 rounded-3xl shadow-xl border border-blue-200 relative overflow-hidden"
                 >
                   {/* Quote Icon */}
-                  <div className="absolute top-8 right-8 text-9xl text-blue-100 font-serif leading-none">"</div>
+                  <div className="absolute top-4 sm:top-8 right-4 sm:right-8 text-6xl sm:text-8xl md:text-9xl text-blue-100 font-serif leading-none">"</div>
                   
                   <div className="relative z-10">
-                    <div className="flex items-center gap-2 mb-8">
+                    <div className="flex items-center gap-2 mb-6 sm:mb-8">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="text-blue-600" fill="currentColor" size={24} />
+                        <Star key={i} className="text-blue-600" fill="currentColor" size={20} />
                       ))}
                     </div>
                     
-                    <p className="text-2xl lg:text-3xl text-gray-800 mb-10 leading-relaxed italic font-medium">
-                      "{parentTestimonials[activeTestimonial].text}"
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 mb-8 sm:mb-10 leading-relaxed italic font-medium">{parentTestimonials[activeTestimonial].text}"
                     </p>
                     
                     <div className="flex items-center gap-5">
@@ -1457,16 +1457,16 @@ const Home = () => {
                 </h4>
                 <p className="text-blue-200">{t('footer.newsletter.description')}</p>
               </div>
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <input 
                   type="email" 
                   placeholder={t('footer.newsletter.placeholder')} 
-                  className="flex-grow bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-blue-300 focus:outline-none focus:border-blue-400 transition-all"
+                  className="flex-grow bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-white placeholder:text-blue-300 focus:outline-none focus:border-blue-400 transition-all w-full"
                 />
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl transition-all flex items-center gap-2"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-xl transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                 >
                   <span>{t('footer.newsletter.buttonText')}</span>
                   <ArrowRight size={20} />
