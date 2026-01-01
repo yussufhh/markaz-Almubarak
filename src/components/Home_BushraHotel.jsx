@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, Star, ChevronRight, MapPin, Phone, Mail, 
-  Wifi, Coffee, Car, UtensilsCrossed, ShoppingBag, 
-  Clock, CheckCircle, ChevronLeft, ChevronUp,
-  Facebook, Instagram, Send, ArrowRight, Users, ChefHat,
-  Utensils, Award, Heart, MessageCircle, Apple, Sandwich
+  Wifi, Coffee, Car, Wind, UtensilsCrossed, Waves, 
+  Shield, Clock, CheckCircle, ChevronLeft, ChevronUp,
+  Facebook, Instagram, Send, ArrowRight, Users, Bed,
+  Calendar, Award, Heart, MessageCircle
 } from 'lucide-react';
 
 const Home = () => {
@@ -94,103 +94,89 @@ const Home = () => {
   };
 
   // Data arrays
-  const menuItems = [
+  const rooms = [
     {
-      name: "Mandazi & Chai",
-      description: "Freshly made sweet fried dough served with hot spiced tea - perfect for breakfast or a snack.",
-      price: "150",
-      features: ["Freshly Made", "Hot & Sweet", "Traditional Recipe", "Authentic Taste"],
-      image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop"
+      name: "Standard Room",
+      description: "Comfortable and affordable room perfect for solo travelers and budget-conscious guests.",
+      price: "2,500",
+      features: ["Free Wi-Fi", "Air Conditioning", "Private Bathroom", "Breakfast Included"],
+      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&h=300&fit=crop"
     },
     {
-      name: "Pilau & Kachumbari",
-      description: "Aromatic spiced rice cooked with tender meat, served with fresh tomato and onion salad.",
-      price: "400",
-      features: ["Spiced Rice", "Tender Meat", "Fresh Salad", "Full Portion"],
-      image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop"
+      name: "Deluxe Room",
+      description: "Spacious room with modern amenities and a comfortable workspace for business travelers.",
+      price: "4,000",
+      features: ["Free Wi-Fi", "AC", "Work Desk", "Mini Fridge", "Breakfast"],
+      image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop"
     },
     {
-      name: "Chapati & Stew",
-      description: "Soft layered flatbread served with rich vegetable or meat stew - a hearty meal.",
-      price: "300",
-      features: ["Soft Chapati", "Rich Stew", "Vegetarian Option", "Generous Serving"],
-      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop"
+      name: "Executive Suite",
+      description: "Premium suite with separate living area, perfect for extended stays and special occasions.",
+      price: "6,500",
+      features: ["Free Wi-Fi", "Living Area", "King Bed", "Room Service", "Premium Breakfast"],
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop"
     },
     {
-      name: "Fresh Fruit Platter",
-      description: "Selection of seasonal fresh fruits - mango, avocado, papaya, banana, and more.",
-      price: "250",
-      features: ["Fresh Daily", "Seasonal Fruits", "Healthy Choice", "Large Portion"],
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop"
-    },
-    {
-      name: "Biriyani Special",
-      description: "Fragrant rice layered with spiced meat and aromatic herbs - our signature dish.",
-      price: "500",
-      features: ["Signature Dish", "Layered Rice", "Aromatic Spices", "Chef's Special"],
-      image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=300&fit=crop"
-    },
-    {
-      name: "Samosa & Juice",
-      description: "Crispy triangular pastries filled with spiced vegetables or meat, served with fresh juice.",
-      price: "200",
-      features: ["Crispy & Hot", "Fresh Juice", "Veg & Meat Options", "Quick Snack"],
-      image: "https://images.unsplash.com/photo-1601050690117-c5c1ca5c6e7b?w=400&h=300&fit=crop"
+      name: "Family Suite",
+      description: "Spacious accommodation ideal for families, with extra beds and kid-friendly amenities.",
+      price: "7,500",
+      features: ["2 Bedrooms", "Family Friendly", "Extra Space", "Full Service"],
+      image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop"
     }
   ];
 
   const testimonials = [
     {
-      text: "The best mandazi in Garissa! So fresh and perfectly sweet. I come here every morning for breakfast. The chai is also amazing!",
+      text: "Excellent location near the university! The staff were incredibly friendly and the rooms were spotless. Highly recommend for anyone visiting Garissa.",
       guest: "Ahmed Hassan",
-      location: "Garissa University Student",
+      location: "Nairobi, Kenya",
       rating: 5
     },
     {
-      text: "Their pilau is absolutely delicious! Perfectly spiced and the meat is so tender. The portions are generous and the price is great.",
+      text: "I stayed here for a business trip and was impressed by the professionalism. Great amenities, comfortable bed, and delicious breakfast.",
       guest: "Sarah Wanjiru",
-      location: "Local Resident",
+      location: "Mombasa, Kenya",
       rating: 5
     },
     {
-      text: "I love their fresh fruit platters! The mangoes and avocados are always ripe and sweet. Healthy and delicious!",
+      text: "Perfect for families! The staff helped us feel right at home. The food was amazing and the location is very convenient.",
       guest: "Omar Abdullah",
-      location: "Regular Customer",
+      location: "Garissa, Kenya",
       rating: 5
     },
     {
-      text: "Best samosas in town! Crispy on the outside, flavorful on the inside. The staff is friendly and service is quick.",
+      text: "Best hotel in Garissa! Clean, affordable, and the service is exceptional. I'll definitely be back.",
       guest: "Fatima Mohamed",
-      location: "Business Owner",
+      location: "Wajir, Kenya",
       rating: 5
     }
   ];
 
   const facilities = [
-    { icon: UtensilsCrossed, name: "Dine In", description: "Comfortable seating and clean dining area" },
-    { icon: ShoppingBag, name: "Takeaway Service", description: "All dishes available for takeout" },
-    { icon: Coffee, name: "Fresh Beverages", description: "Tea, coffee, juices, and sodas" },
-    { icon: ChefHat, name: "Expert Chefs", description: "Experienced cooks with traditional recipes" },
-    { icon: Utensils, name: "Fresh Ingredients", description: "Daily fresh produce and quality meats" },
-    { icon: Clock, name: "Fast Service", description: "Quick preparation without compromising quality" },
-    { icon: Users, name: "Catering Available", description: "Special orders for events and functions" },
-    { icon: Heart, name: "Halal Certified", description: "All our food is 100% halal" }
+    { icon: Wifi, name: "Free Wi-Fi", description: "High-speed internet throughout the hotel" },
+    { icon: Wind, name: "Air Conditioning", description: "Climate control in all rooms" },
+    { icon: Car, name: "Free Parking", description: "Secure parking for all guests" },
+    { icon: UtensilsCrossed, name: "Restaurant", description: "Delicious local and international cuisine" },
+    { icon: Coffee, name: "Breakfast Included", description: "Complimentary breakfast daily" },
+    { icon: Waves, name: "Swimming Pool", description: "Outdoor pool for relaxation" },
+    { icon: Shield, name: "24/7 Security", description: "Professional security staff on duty" },
+    { icon: Clock, name: "24-Hour Reception", description: "Always here to help you" }
   ];
 
   const galleryImages = [
-    { url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop", title: "Fresh Mandazi" },
-    { url: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop", title: "Pilau Rice" },
-    { url: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&h=400&fit=crop", title: "Chapati & Stew" },
-    { url: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop", title: "Fresh Fruits" },
-    { url: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&h=400&fit=crop", title: "Biriyani Special" },
-    { url: "https://images.unsplash.com/photo-1601050690117-c5c1ca5c6e7b?w=600&h=400&fit=crop", title: "Samosas" }
+    { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop", title: "Hotel Exterior" },
+    { url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop", title: "Lobby Area" },
+    { url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&h=400&fit=crop", title: "Deluxe Room" },
+    { url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&h=400&fit=crop", title: "Restaurant" },
+    { url: "https://images.unsplash.com/photo-1576354302919-96748cb8299e?w=600&h=400&fit=crop", title: "Swimming Pool" },
+    { url: "https://images.unsplash.com/photo-1563911302283-d2bc129e7570?w=600&h=400&fit=crop", title: "Conference Room" }
   ];
 
   const amenityIcons = [
-    { icon: UtensilsCrossed, label: "Dine In" },
-    { icon: ShoppingBag, label: "Takeaway" },
-    { icon: ChefHat, label: "Fresh Food" },
-    { icon: Coffee, label: "Beverages" }
+    { icon: Wifi, label: "Wi-Fi" },
+    { icon: Coffee, label: "Breakfast" },
+    { icon: Car, label: "Parking" },
+    { icon: Wind, label: "AC" }
   ];
 
   return (
@@ -211,7 +197,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="bg-gradient-to-br from-amber-500 to-amber-600 w-12 h-12 rounded-lg flex items-center justify-center shadow-lg">
-                <ChefHat className="w-7 h-7 text-white" />
+                <Bed className="w-7 h-7 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className={`font-bold text-xl ${scrolled ? 'text-gray-800' : 'text-white'}`}>
@@ -225,7 +211,7 @@ const Home = () => {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              {['menu', 'services', 'gallery', 'testimonials', 'contact'].map((item) => (
+              {['rooms', 'amenities', 'gallery', 'testimonials', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -242,7 +228,7 @@ const Home = () => {
                 onClick={() => scrollToSection('contact')}
                 className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all"
               >
-                Order Now
+                Book Now
               </button>
             </div>
 
@@ -270,7 +256,7 @@ const Home = () => {
               className="md:hidden bg-white shadow-lg"
             >
               <div className="px-4 py-6 space-y-4">
-                {['menu', 'services', 'gallery', 'testimonials', 'contact'].map((item) => (
+                {['rooms', 'amenities', 'gallery', 'testimonials', 'contact'].map((item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item)}
@@ -283,7 +269,7 @@ const Home = () => {
                   onClick={() => scrollToSection('contact')}
                   className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-3 rounded-lg font-semibold"
                 >
-                  Order Now
+                  Book Now
                 </button>
               </div>
             </motion.div>
@@ -296,8 +282,8 @@ const Home = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop" 
-            alt="Bushra Hotel Restaurant"
+            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&h=1080&fit=crop" 
+            alt="Bushra Hotel"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/70 to-gray-900/60"></div>
@@ -325,7 +311,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              Authentic Taste, Fresh Ingredients, Traditional Recipes
+              Experience Comfort and Elegance in Garissa
             </motion.p>
 
             <motion.div 
@@ -338,14 +324,14 @@ const Home = () => {
                 onClick={() => scrollToSection('contact')}
                 className="group bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2"
               >
-                Order Now
+                Book Now
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
-                onClick={() => scrollToSection('menu')}
+                onClick={() => scrollToSection('rooms')}
                 className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all"
               >
-                View Menu
+                View Rooms
               </button>
             </motion.div>
 
@@ -381,12 +367,12 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Delicious Food, Served Fresh Daily
+              Your Home Away From Home
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Located in the heart of Garissa, near Garissa University, Bushra Hotel serves authentic 
-              traditional dishes made with fresh ingredients and time-honored recipes. Taste the difference!
+              Located in the heart of Garissa, just minutes from Garissa University, Bushra Hotel offers 
+              the perfect blend of comfort, convenience, and hospitality for all travelers.
             </p>
           </motion.div>
 
@@ -395,8 +381,8 @@ const Home = () => {
             <motion.div {...slideIn} className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop" 
-                  alt="Delicious Food"
+                  src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop" 
+                  alt="Hotel Interior"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
@@ -417,23 +403,10 @@ const Home = () => {
                   <MapPin className="w-6 h-6 text-amber-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Perfect Location</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Prime Location</h3>
                   <p className="text-gray-600">
-                    Conveniently located near Garissa University, making us the perfect spot for students, 
-                    staff, and locals to enjoy delicious meals throughout the day.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-amber-100 p-3 rounded-lg">
-                  <ChefHat className="w-6 h-6 text-amber-600" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Expert Chefs</h3>
-                  <p className="text-gray-600">
-                    Our experienced chefs use traditional recipes and fresh ingredients to create 
-                    authentic dishes that taste just like home-cooked meals.
+                    Strategically located near Garissa University, making it perfect for students, 
+                    parents, and university staff. Easy access to local attractions and amenities.
                   </p>
                 </div>
               </div>
@@ -443,10 +416,23 @@ const Home = () => {
                   <Heart className="w-6 h-6 text-amber-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Made with Love</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Warm Hospitality</h3>
                   <p className="text-gray-600">
-                    Every dish is prepared with care and attention to detail. We use only 
-                    fresh, quality ingredients and maintain the highest hygiene standards.
+                    Our dedicated staff ensures every guest feels welcomed and cared for. 
+                    Experience genuine Kenyan hospitality at its finest.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-amber-100 p-3 rounded-lg">
+                  <Award className="w-6 h-6 text-amber-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Quality Service</h3>
+                  <p className="text-gray-600">
+                    From clean, comfortable rooms to delicious dining options, we maintain 
+                    the highest standards to ensure your stay is exceptional.
                   </p>
                 </div>
               </div>
@@ -465,21 +451,21 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ==================== MENU SECTION ==================== */}
-      <section id="menu" className="py-20 bg-white">
+      {/* ==================== ROOMS SECTION ==================== */}
+      <section id="rooms" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Our Delicious Menu
+              Our Rooms & Suites
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore our selection of authentic dishes made with fresh ingredients and traditional recipes
+              Choose from our selection of comfortable and well-appointed rooms designed for your perfect stay
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {menuItems.map((item, index) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {rooms.map((room, index) => (
               <motion.div
                 key={index}
                 {...fadeIn}
@@ -487,26 +473,26 @@ const Home = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
               >
-                {/* Menu Item Image */}
+                {/* Room Image */}
                 <div className="relative overflow-hidden h-64">
                   <img 
-                    src={item.image} 
-                    alt={item.name}
+                    src={room.image} 
+                    alt={room.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full font-bold shadow-lg">
-                    KSh {item.price}
+                    KSh {room.price}/night
                   </div>
                 </div>
 
-                {/* Menu Item Details */}
+                {/* Room Details */}
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.name}</h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">{item.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{room.name}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-2">{room.description}</p>
                   
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {item.features.map((feature, idx) => (
+                    {room.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-700">
                         <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0" />
                         <span>{feature}</span>
@@ -514,12 +500,12 @@ const Home = () => {
                     ))}
                   </div>
 
-                  {/* Order Button */}
+                  {/* Book Button */}
                   <button 
                     onClick={() => scrollToSection('contact')}
                     className="w-full bg-gradient-to-r from-gray-800 to-gray-900 hover:from-amber-500 hover:to-amber-600 text-white py-3 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 group-hover:shadow-lg"
                   >
-                    Order Now
+                    Book Now
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -529,16 +515,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ==================== SERVICES SECTION ==================== */}
-      <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      {/* ==================== AMENITIES/FACILITIES SECTION ==================== */}
+      <section id="amenities" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Our Services
+              World-Class Facilities
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Quality food service with a commitment to freshness and authentic taste
+              Everything you need for a comfortable and memorable stay
             </p>
           </motion.div>
 
@@ -759,17 +745,17 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div {...fadeInUp} className="text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Hungry? <span className="text-amber-500">We're Ready to Serve!</span>
+              Ready to Experience <span className="text-amber-500">Exceptional Hospitality?</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Order now and enjoy fresh, delicious food prepared with authentic recipes and quality ingredients
+              Book your stay today and discover why Bushra Hotel is the preferred choice for travelers in Garissa
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="group bg-gradient-to-r from-amber-500 to-amber-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all inline-flex items-center justify-center gap-2"
               >
-                Order Your Food Now
+                Book Your Room Now
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <a 
@@ -777,16 +763,16 @@ const Home = () => {
                 className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Call to Order
+                Call Us Now
               </a>
             </div>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               {[
-                { number: "1000+", label: "Happy Customers" },
-                { number: "50+", label: "Menu Items" },
-                { number: "Daily", label: "Fresh Cooking" },
+                { number: "500+", label: "Happy Guests" },
+                { number: "50+", label: "Rooms Available" },
+                { number: "24/7", label: "Support" },
                 { number: "15+", label: "Years Experience" }
               ].map((stat, index) => (
                 <motion.div
@@ -813,7 +799,7 @@ const Home = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Place your order, make inquiries, or let us know how we can serve you better
+              We'd love to hear from you. Contact us for bookings, inquiries, or any assistance
             </p>
           </motion.div>
 
@@ -936,7 +922,7 @@ const Home = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="bg-gradient-to-br from-amber-500 to-amber-600 w-12 h-12 rounded-lg flex items-center justify-center">
-                  <ChefHat className="w-7 h-7 text-white" />
+                  <Bed className="w-7 h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-xl">Bushra Hotel</h3>
@@ -944,8 +930,8 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-400 text-sm">
-                Serving authentic, delicious food made with fresh ingredients and traditional recipes. 
-                Your favorite spot for quality meals in Garissa.
+                Your premier destination for comfort and hospitality in Garissa. 
+                Experience excellence with every stay.
               </p>
             </div>
 
@@ -953,7 +939,7 @@ const Home = () => {
             <div>
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                {['menu', 'services', 'gallery', 'testimonials', 'contact'].map((item) => (
+                {['rooms', 'amenities', 'gallery', 'testimonials', 'contact'].map((item) => (
                   <li key={item}>
                     <button
                       onClick={() => scrollToSection(item)}
@@ -970,11 +956,11 @@ const Home = () => {
             <div>
               <h4 className="font-bold text-lg mb-4">Our Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>Dine In Service</li>
-                <li>Takeaway Orders</li>
-                <li>Event Catering</li>
-                <li>Fresh Juices & Beverages</li>
-                <li>Halal Certified</li>
+                <li>Room Service</li>
+                <li>Restaurant & Dining</li>
+                <li>Conference Facilities</li>
+                <li>Airport Transfer</li>
+                <li>Laundry Service</li>
               </ul>
             </div>
 
